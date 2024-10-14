@@ -31,7 +31,44 @@ export class AppComponent {
 
  
 
-      header=[
+      headers=[
+      {
+        icon:'fa-solid fa-house menu-icon pe-2',
+        title:'होम',
+         
+
+      },
+      {
+        icon:'fas fa-play-circle pe-2',
+        title:'वीडियो',
+        state:'वीडियो',
+         
+
+      },
+      {
+        icon:'fas fa-newspaper pe-2',
+        title:'विज़ुअल स्टोरीज़',
+         
+
+      },
+      {
+        icon:'fa-solid fa-house menu-icon pe-2',
+        title:'होम',
+         
+
+      },
+      {
+        icon:'fas fa-play-circle pe-2',
+        title:'राज्य ',
+         
+
+      },
+      {
+        icon:'fas fa-newspaper pe-2',
+        title:'विज़ुअल स्टोरीज़',
+         
+
+      },
       {
         icon:'fa-solid fa-house menu-icon pe-2',
         title:'होम',
@@ -49,8 +86,43 @@ export class AppComponent {
         title:'विज़ुअल स्टोरीज़',
          
 
-      }
+      },
+      {
+        icon:'fas fa-newspaper pe-2',
+        title:'विज़ुअल स्टोरीज़',
+         
+
+      },
+      {
+        icon:'fas fa-newspaper pe-2',
+        title:'विज़ुअल स्टोरीज़',
+         
+
+      },
      ]
+      header=[
+      {
+        icon:'fa-solid fa-house menu-icon pe-2',
+        title:'होम',
+         
+
+      },
+      {
+        icon:'fas fa-play-circle pe-2',
+        title:'वीडियो',
+        state:'वीडियो',
+         
+
+      },
+      {
+        icon:'fas fa-newspaper pe-2',
+        title:'विज़ुअल स्टोरीज़',
+         
+
+      },
+    
+     ]
+     
  leftbar=[ 
   {
     icon:'fa-solid fa-house menu-icon pe-2',
@@ -69,7 +141,7 @@ export class AppComponent {
     title:'विज़ुअल स्टोरीज़',
      
 
-  }
+  },
  ]
 
 

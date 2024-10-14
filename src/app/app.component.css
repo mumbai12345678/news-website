@@ -1,193 +1,217 @@
-.base-layout{
-   
-    
-     
- 
-  
-}
+.base-layout {}
 
 
-.nav{
+.nav {
   width: 100%;
   height: 32px;
   background-color: rgb(243 244 246);
 }
-.right-nav{
-   height: 100vh;
-    background-color: rgb(255, 255, 255);
-    position:sticky;
-    right:0px;
 
-    border-left: 1px solid #e5e7eb;
- 
-top:64px;
-bottom: 0px;
-.mat-chip.mat-standard-chip {
-  background-color: #fbfbfb;
-  color: rgba(0, 0, 0, .87);
-  border: 1px solid gray;}
- 
- 
+.right-nav {
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  position: sticky;
+  right: 0px;
+
+  border-left: 1px solid #e5e7eb;
+
+  top: 64px;
+  bottom: 0px;
+
+  .mat-chip.mat-standard-chip {
+    background-color: #fbfbfb;
+    color: rgba(0, 0, 0, .87);
+    border: 1px solid gray;
+  }
+
+
 }
- 
- .left-nav{
+
+.left-nav {
   background-color: #ffffff;
-  
+
   height: 100vh;
   position: fixed;
   top: 4rem;
   width: 160px;
-  border: 1px solid rgb(229 231 235 );
- 
-    
- }
+  border: 1px solid rgb(229 231 235);
 
 
-  /* ==============topnav */
-  /* Style for the top navigation */
+}
+
+
+/* ==============topnav */
+/* Style for the top navigation */
 .top-nav {
-     
-    height: 4rem;
-    width: 100vw;
-    background-color: rgb(255, 255, 255);
-    position: fixed;
-    top: 32px;
- left:0px;
- right:0px;
-    z-index: 1;
-    box-shadow: 0 4px 8px rgb(0 0 0 / 3%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    transition: top 0ms ease-in;
-  }
-  
-  /* Left side menus */
-  .nav-left {
-    display: flex;
-  }
-  
-  .menu-item {
-    font-size: 14px;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    border-left: 1px solid #ddd; /* Left border for separation */
-    
-  }
-  .menu-item:nth-child(1) {
-    border-left: none !important /* Remove left border for the first item */
-  }
-  
- 
-  
-  .menu-icon {
-    margin-right: 8px; /* Space between icon and text */
-  }
-  
-  /* Right side search box */
-  .nav-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .search-container {
-    position: relative; /* Allows positioning of the icon */
-    display: inline-block; /* Make the container fit the input width */
-  }
-  
-  .search-box {
-    padding: 0.5rem 2rem 0.5rem 1rem; /* Adjust padding for the icon */
-    font-size: 1rem;
-    border: 1px solid #ecebeb;
-    border-radius: 25px;
-    outline: none;
-    width: 20rem;
-    background-color: #f7f7f7;
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  }
-  
-  .search-icon {
-    position: absolute;
-    top: 50%;
-    right: 40px; /* Adjust as necessary for spacing */
-    transform: translateY(-50%); /* Center the icon vertically */
-    color: #999; /* Color of the icon */
-  }
-  
-  
 
-
-
-
-
- 
- .main-content{
-     
-    height: 100%;
+  height: 4rem;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 32px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 3%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  transition: top 0ms ease-in;
 }
-.nav-visibility {
- top:0px
+
+/* Left side menus */
+.nav-left {
+  display: flex;
+}
+
+.menu-item {
+  font-size: 14px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #ddd;
+  /* Left border for separation */
 
 }
-.top{
+
+.menu-item:nth-child(1) {
+  border-left: none !important
+    /* Remove left border for the first item */
+}
+
+
+
+.menu-icon {
+  margin-right: 8px;
+  /* Space between icon and text */
+}
+
+/* Right side search box */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  position: relative;
+  /* Allows positioning of the icon */
+  display: inline-block;
+  /* Make the container fit the input width */
+}
+
+.search-box {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  /* Adjust padding for the icon */
+  font-size: 1rem;
+  border: 1px solid #ecebeb;
+  border-radius: 25px;
+  outline: none;
+  width: 20rem;
+  background-color: #f7f7f7;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.search-icon {
   position: absolute;
+  top: 50%;
+  right: 40px;
+  /* Adjust as necessary for spacing */
+  transform: translateY(-50%);
+  /* Center the icon vertically */
+  color: #999;
+  /* Color of the icon */
+}
+
+
+
+
+
+
+
+
+.main-content {
+
+  height: 100%;
+}
+
+.nav-visibility {
+  top: 0px
+}
+
+.top {
+  position: fixed; 
   bottom: 86px;
   right: 23px;
 }
 
- /* ====================left nav=============== */
- 
- .left-nav-content{
+
+/* ====================left nav=============== */
+
+.left-nav-content {
   color: black;
   text-decoration: none;
-  .nav-item{
-  padding: 10px 10px;
+
+  .nav-item {
+    padding: 10px 10px;
     font-size: 14px;
     font-weight: 500;
-   }
- }
- /* ================ng material============= */
- .example-box.cdk-drag-animating {
+  }
+}
+
+/* ================ng material============= */
+.example-box.cdk-drag-animating {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 .example-chip .cdk-drop-list-dragging {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
- .suggetion-heading{
+
+.suggetion-heading {
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1rem;
-  color: #ff7f0b;
-     padding-bottom: 10px;
-     a{
-      text-decoration: none;
-      color: rgb(255, 94, 1);
-     }
- }
- /* ========================rightnav css= */
- .right-top-advertisement{
+  color:rgb(183 31 51);
+  padding-bottom: 10px;
+  
+
+  a {
+    text-decoration: none;
+    color:rgb(183 31 51);
+    font-weight: 700;
+  }
+}
+
+/* ========================rightnav css= */
+.right-top-advertisement {
   height: 18.125rem;
   background-color: rgb(243 244 246);
   font-size: 12px;
   color: #747474;
-  .ad-container{
+
+  .ad-container {
     overflow: hidden;
-      text-align: center;
-       border: 1px solid rgb(159 145 145);
-      height: 16.125rem;
-      width: inherit;
-      background-color: white;
-      
+    text-align: center;
+    border: 1px solid rgb(159 145 145);
+    height: 16.125rem;
+    width: inherit;
+    background-color: white;
+
   }
-   
- }
- /* ===================footer=============== */
-  .footer{
-    height: 
+
+}
+
+/* ===================footer=============== */
+.footer {
+  height:
     31.1875rem;
-    width: 100%;
-    background-color:  rgb(243 244 246);
-  }
+  width: 100%;
+  background-color: rgb(243 244 246);
+}
+
+a {
+  text-decoration: none;
+  font-size: small;
+}
+

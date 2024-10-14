@@ -1,12 +1,26 @@
 <!-- <div style="width: 100%;height: 30px;background-color: rgb(245, 202, 202); ">topnav</div> -->
-<div class="base-layout row">
+<div class="base-layout row mx-2 "  style="padding: 7px;">
   <!-- ===================top-nav================ -->
   <div
     class="header col-12 top-header"
     style="margin: 0px !important; padding: 0px !important"
   >
     <nav class="nav" style="">
-      <span>home</span> <span>home</span> <span>home</span><span>home</span>
+      <div class="d-flex gap-3">
+        <a href="https://www.thelallantop.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">Lallantop</a>
+        <a href="https://www.thesportstak.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">SportsTak</a>
+        <a href="https://www.astrotak.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">AstroTak</a>
+        <a href="https://www.newstak.in/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">NewsTak</a>
+        <a href="https://www.thelallantop.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">Lallantop</a>
+        <a href="https://www.thesportstak.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">SportsTak</a>
+        <a href="https://www.astrotak.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">AstroTak</a>
+        <a href="https://www.newstak.in/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">NewsTak</a>
+        <a href="https://www.thelallantop.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">Lallantop</a>
+        <a href="https://www.thesportstak.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">SportsTak</a>
+      
+        <a href="https://www.newstak.in/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">NewsTak</a>
+     
+      </div>
     </nav>
     <header class="top-nav" [ngClass]="{ 'nav-visibility': isvisible }">
       <div class="nav-left ps-2">
@@ -38,7 +52,7 @@
 <div class="row" style="margin-top: 4rem">
   <div class="col-2 left-nav">
     <aside class="    " style="padding: 3rem 0px">
-      <a href="" *ngFor="let items of header" class="left-nav-content">
+      <a href="" *ngFor="let items of headers" class="left-nav-content">
         <div class="nav-item">
           <i class="fas fa-play-circle pe-2"> </i>
           {{ items.title }}
@@ -92,8 +106,29 @@
             </div>
           </div>
         </div>
+        <div class="suggetion-heading">
+          <!-- <a href="">लेटेस्ट</a> -->
+           <h5>लेटेस्ट</h5>
+        </div>
 
-        <button class="btn btn-danger top">top</button>
+        <div>
+         
+          <div class="right-top-advertisement mt-2">
+            <p class="font-light text-slate-600   text-center py-0 my-0">
+              <small>ADVERTISEMENT</small>
+            </p>
+            <div class="ad-container mx-2">
+              <iframe 
+                src="" 
+                 
+                style="  overflow: hidden;" 
+                title="Advertisement">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <app-top-button></app-top-button>
       </div>
     </div>
   </div>
