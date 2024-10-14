@@ -1,12 +1,31 @@
 import { Component, HostListener } from '@angular/core';
-import { NgForOf } from '@angular/common';
+import { NgForOf , } from '@angular/common';
 import { ServicesService } from './services.service';
+import {MatChipInputEvent} from '@angular/material/chips';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+
+export interface Topic {
+  name: string;
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+
+  topics:  Topic[] = [
+    {name: 'न्यायालय समाचार'},
+    {name: 'क्राइम-कोर्ट न्यूज़'},
+    {name: 'वित्तीय धोखाधड़ी'},
+    {name: 'गैंगस्टर'},
+    {name: 'साइबर हमला'},
+    {name: 'ऑनलाइन धोखाधड़ी'},
+  ];
+
+  
+
   isvisible:boolean=false;
    private currentScroll:number=0
 
@@ -73,7 +92,8 @@ export class AppComponent {
 //  }
 @HostListener('window:scroll', [])
 onWindowScroll(event: Event) {
-  const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  let scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  
   
   console.log('Scroll position:', scrollPosition);
 
@@ -88,12 +108,7 @@ this.isvisible=true
   
  
 }
-// scrollUp(){
-//   if (this.scrollPosition >30) {
-       
-    
-//     this.isvisible=true
-//       }
-
-// }
+ 
+ 
+ 
 }

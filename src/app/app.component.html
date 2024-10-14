@@ -1,54 +1,102 @@
 <!-- <div style="width: 100%;height: 30px;background-color: rgb(245, 202, 202); ">topnav</div> -->
-<div class="base-layout row "  >
+<div class="base-layout row">
   <!-- ===================top-nav================ -->
-  <div class="header col-12 top-header" style="margin: 0px!important; padding: 0px!important;">
-    <nav class=" nav" style=""  >  <span>home</span> <span>home</span> <span>home</span><span>home</span></nav>
-    <header class="top-nav " [ngClass]="{'nav-visibility':isvisible}"> 
-       
-            <div class="nav-left ps-2">
-                <div class="brand-logo">
-                  <img src="../assets/images/2.png" alt="Brand Logo" style="max-width: 100px; height: auto;">
-
-                </div>
-                <div class="menu-item ps-5" *ngFor="let items of header">
-                  <i  [ngClass]="items.icon"></i>  {{items.title}}
-                </div>
-                
-               
-              </div>
-              <div class="nav-right pe-2">
-                <div class="search-container">
-                  <input type="text" class="search-box" placeholder="यहां खोज करें...">
-                  <i class="fas fa-search search-icon"></i>
-                </div>
-              </div>
-         
-         </header>
+  <div
+    class="header col-12 top-header"
+    style="margin: 0px !important; padding: 0px !important"
+  >
+    <nav class="nav" style="">
+      <span>home</span> <span>home</span> <span>home</span><span>home</span>
+    </nav>
+    <header class="top-nav" [ngClass]="{ 'nav-visibility': isvisible }">
+      <div class="nav-left ps-2">
+        <div class="brand-logo">
+          <img
+            src="../assets/images/2.png"
+            alt="Brand Logo"
+            style="max-width: 100px; height: auto"
+          />
+        </div>
+        <div class="menu-item ps-4" *ngFor="let items of header">
+          <i [ngClass]="items.icon"></i> {{ items.title }}
+        </div>
+      </div>
+      <div class="nav-right pe-2">
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-box"
+            placeholder="यहां खोज करें..."
+          />
+          <i class="fas fa-search search-icon"></i>
+        </div>
+      </div>
+    </header>
   </div>
   <!-- ===========================left-nav============= -->
 </div>
-<div class="row  " style="margin-top: 4rem;  " >
+<div class="row" style="margin-top: 4rem">
   <div class="col-2 left-nav">
-    <aside class="    " style="padding:  3rem 0px;"> 
-      <a href="" *ngFor="let items of header" class="left-nav-content"> <div class="nav-item">
-        <i class="fas fa-play-circle pe-2"> </i>
-         {{items.title}}
-      </div>
-    </a>
+    <aside class="    " style="padding: 3rem 0px">
+      <a href="" *ngFor="let items of header" class="left-nav-content">
+        <div class="nav-item">
+          <i class="fas fa-play-circle pe-2"> </i>
+          {{ items.title }}
+        </div>
+      </a>
     </aside>
   </div>
 
   <!-- ==================main-content============ -->
-  <div class="col-10" style="margin-left: 16%  ;padding: 0px !important  ;
-  ">
-   
-    <div class="row"  >
-      <div class="col-8 main-content" >    <router-outlet></router-outlet> </div>
-      <div class="col-4 right-nav"  >  lorem 40
-        <!-- <button class="btn btn-danger top" (click)="scrollUp()">top</button> -->
+  <div class="col-10" style="margin-left: 13%; padding: 0px !important  ">
+    <div class="row">
+      <div class="col-8 main-content">
+        <div style="padding: 10px;"> <router-outlet></router-outlet> </div>
+        <footer  class="row ">
+          <div class="col-12 footer   ">
+            <div class=" footer-content bg-warning  my-4 mx-2 py-2 px-1 ">
+              <h5>लेटेस्ट आर्टिकल्स</h5>
+
+
+            </div>
+          </div>
+
+        </footer>
+      </div>
+      <div class="col-4 right-nav pt-2  ">
+        <div class="suggetion-heading">
+          <a href="">#Topic</a>
+        </div>
+
+        <div>
+          <mat-chip-list
+            class="example-chip"
+            cdkDropList
+            cdkDropListOrientation="horizontal"
+          >
+            <mat-chip class="example-box" cdkDrag *ngFor="let topic of topics">
+              {{ topic.name }}
+            </mat-chip>
+          </mat-chip-list>
+          <div class="right-top-advertisement mt-2">
+            <p class="font-light text-slate-600   text-center py-0 my-0">
+              <small>ADVERTISEMENT</small>
+            </p>
+            <div class="ad-container mx-2">
+              <iframe 
+                src="" 
+                 
+                style="  overflow: hidden;" 
+                title="Advertisement">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-danger top">top</button>
       </div>
     </div>
   </div>
 
   <!-- ==============right-nav============ -->
-</div> 
+</div>
