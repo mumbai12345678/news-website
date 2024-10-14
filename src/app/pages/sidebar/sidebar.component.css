@@ -1,0 +1,60 @@
+/* styles.css or app.component.css */
+.sidebar {
+    width: 180px;
+    background-color: white;
+    padding: 20px;
+    border-right: 1px solid #eee;
+    height: 100vh;
+  }
+  
+  .sidebar .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .sidebar .logo-tag {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+    margin-left: 5px;
+  }
+  
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-nav .nav-link {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar-nav .nav-link i {
+    margin-right: 10px;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .social-link {
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+  
+  
