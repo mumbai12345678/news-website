@@ -143,12 +143,16 @@
   position: fixed; 
   bottom: 86px;
   right: 23px;
+}.top-ad-container{
+  height: 8.125rem;
+  background-color: rgb(243 244 246);
+  margin-top: 8px;
 }
 
 
-/* ====================left nav=============== */
-
-.left-nav-content {
+ /* ====================left nav=============== */
+ 
+ .left-nav-content{
   color: black;
   text-decoration: none;
 
@@ -199,19 +203,48 @@
     background-color: white;
 
   }
-
+   
+ }
+ /* ===================footer=============== */
+  .footer{
+    height: 
+    30rem;
+    width: 100%;
+    background-color:  rgb(243 244 246);
+    .news-content{
+      font-size: 14px;
+      color:#64748B;
+      text-decoration: none;
+      
+      
+    }
+    .footer-content
+    {
+      border-bottom: 1px solid #B71F33;
+    }
+    .downloads{
+     
+    font-weight: 500;
+    font-size:0.9rem
+  
+    }
+.footer-icon{
+  display: flex;align-items: center;justify-content: center;background-color: #B71F33;
+  width: 32px;height: 32px;border-radius: 50%;
+  margin-left:1rem ;
 }
-
-/* ===================footer=============== */
-.footer {
-  height:
-    31.1875rem;
-  width: 100%;
-  background-color: rgb(243 244 246);
+.heading{
+  color:#B71F33
 }
-
-a {
-  text-decoration: none;
-  font-size: small;
-}
-
+    .about-us{
+      list-style: none;
+      color:   #B71F33;
+      text-decoration:none;
+      padding-left: 2rem;
+      font-weight: 800;
+      font-size: 15px;
+    } 
+    .copyright{
+      font-size: 15px;
+    }
+  }
