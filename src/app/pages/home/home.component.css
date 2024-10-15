@@ -19,3 +19,7 @@
     color:rgb(107 114 128);
     font-weight: 500;
 }
+.layout .row{
+    --bs-gutter-x: 0rem;
+    --bs-gutter-y:0rem
+}

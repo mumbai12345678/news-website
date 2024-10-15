@@ -1,7 +1,7 @@
 .top-nav {
 
     height: 4rem;
-    width: 100vw;
+    width: 100%;
     background-color: rgb(255, 255, 255);
     position: fixed;
     top: 32px;
