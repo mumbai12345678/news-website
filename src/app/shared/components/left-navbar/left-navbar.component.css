@@ -1,0 +1,21 @@
+.left-nav {
+    background-color: #ffffff;
+  
+    height: 100vh;
+    position: fixed;
+    top: 4rem;
+    width: 160px;
+    border: 1px solid rgb(229 231 235);
+  
+  
+  }
+  .left-nav-content{
+    color: black;
+    text-decoration: none;
+  
+    .nav-item {
+      padding: 10px 10px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }

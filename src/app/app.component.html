@@ -1,202 +1,86 @@
 <!-- <div style="width: 100%;height: 30px;background-color: rgb(245, 202, 202); ">topnav</div> -->
-<div class="base-layout row mx-2 "  style="padding: 7px;">
+<div class="base-layout row mx-2" style="padding: 7px">
   <!-- ===================top-nav================ -->
   <div
     class="header col-12 top-header"
     style="margin: 0px !important; padding: 0px !important"
   >
-    <nav class="nav" style="">
-      <div class="d-flex gap-3">
-        <a href="https://www.thelallantop.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">Lallantop</a>
-        <a href="https://www.thesportstak.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">SportsTak</a>
-        <a href="https://www.astrotak.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">AstroTak</a>
-        <a href="https://www.newstak.in/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">NewsTak</a>
-        <a href="https://www.thelallantop.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">Lallantop</a>
-        <a href="https://www.thesportstak.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">SportsTak</a>
-        <a href="https://www.astrotak.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">AstroTak</a>
-        <a href="https://www.newstak.in/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">NewsTak</a>
-        <a href="https://www.thelallantop.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">Lallantop</a>
-        <a href="https://www.thesportstak.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">SportsTak</a>
-      
-        <a href="https://www.newstak.in/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">NewsTak</a>
-     
-      </div>
-    </nav>
-    <header class="top-nav" [ngClass]="{ 'nav-visibility': isvisible }">
-      <div class="nav-left ps-2">
-        <div class="brand-logo">
-          <img
-            src="../assets/images/2.png"
-            alt="Brand Logo"
-            style="max-width: 100px; height: auto"
-          />
-        </div>
-        <div class="menu-item ps-4" *ngFor="let items of header">
-          <i [ngClass]="items.icon"></i> {{ items.title }}
-        </div>
-      </div>
-      <div class="nav-right pe-2">
-        <div class="search-container">
-          <input
-            type="text"
-            class="search-box"
-            placeholder="यहां खोज करें..."
-          />
-          <i class="fas fa-search search-icon"></i>
-        </div>
-      </div>
-    </header>
+    <app-top-nav></app-top-nav>
+    <app-header></app-header>
   </div>
   <!-- ===========================left-nav============= -->
 </div>
 <div class="row" style="margin-top: 4rem">
-  <div class="col-2 left-nav">
-    <aside class="    " style="padding: 3rem 0px">
-      <a href="" *ngFor="let items of headers" class="left-nav-content">
-        <div class="nav-item">
-          <i class="fas fa-play-circle pe-2"> </i>
-          {{ items.title }}
-        </div>
-      </a>
-    </aside>
+  <div class="col-2">
+    <app-left-navbar></app-left-navbar>
   </div>
 
   <!-- ==================main-content============ -->
-  <div class="col-10" style="margin-left: 13%; padding: 0px !important  ">
+  <div class="col-10" style="margin-left: 13%; padding: 0px !important">
     <div class="row">
-      <div class="col-8 main-content">
+      <div class="col-9 main-content">
         <div class="top-ad-container">
-          <p class="fw-light      text-center py-0 my-0">
+          <p class="fw-light text-center py-0 my-0">
             <small>ADVERTISEMENT</small>
-          </p> 
-        <iframe src="" frameborder="0"></iframe></div>
-        <div style="padding: 10px;">
-
-           <router-outlet></router-outlet> 
-          </div>
-        <footer  class="row ">
-          <div class="col-12 footer   ">
-            <div class=" footer-content   my-4 mx-2 py-2 px-1 "  >
-              <h5 class="ps-3 fw-bold text-opacity-100"   style="color: rgb(115 119 126); ">लेटेस्ट आर्टिकल्स</h5>
-              <div class="row ">
-                <div class="col-6">
-                  <ul>
-                    <ng-container *ngFor="let item of latestNews; let i = index">
-                      <li *ngIf="i<2" class="news-content py-2"  >
-                        <a >{{ item.heading }}</a> 
-                        
-                      </li>
-                    </ng-container>
-                    
-                    
-                  </ul>
-                </div>
-                <div class="col-6">
-                  <ul>
-                    <ng-container *ngFor="let item of latestNews; let i = index">
-                      <li *ngIf="i>1" class="news-content py-2 "  >
-                        <a >{{ item.heading }}</a>
-                      </li>
-                    </ng-container>
-                    
-                    
-                  </ul>
-                </div>
-
-              </div>
-              
-
-            </div>
-
-            <div class="row py-3 mx-2 px-1">
-              <div class="col-5 d-flex   ">
-   <div> <img src="../assets/images/barcode.png" alt="" width="130px" height="130px"></div>
-    <div class="ps-3">
-      <h5 class=" downloads">{{downloads}}+ Downloads</h5>
-      <img src="../assets/images/ios-store.png" alt="" width="120px" class="py-2">
-      <img src="../assets/images/googleplay.png" alt="" width="120px">
-    </div>
-              </div>
-              <div class="col-7">
-                <h4 class="fw-bold heading">डाउनलोड करें क्राइम तक ऐप</h4>
-                <h5 style="font-size: 14px;line-height: 1.6;  ">मजेदार फैक्ट, किस्से, क्विज़, रिव्यू और दुनिया भर की जानकारी. जिसे पढ़कर आपको ‘फीलिंग गुड’ हो जाए और आप जरूरी जगहों पर जी-भर चौड़े हो सकें.</h5>
-                <div class="d-flex"> <span>Follow us on: </span>
-                  <div class="footer-icon "  > <i class="fa-brands fa-facebook-f text-light"></i></div>
-                  <div  class="footer-icon " ><i class="fa-brands fa-x-twitter text-light" ></i></div>
-                  <div class="footer-icon " ><i class="fa-brands fa-instagram text-light"></i></div>
-                  <div class="footer-icon " ><i class="fa-brands fa-youtube text-light"></i></div>
-
-                  </div>
-               
-              </div>
-
-            </div>
-            <div class="row mx-4 my-3">
-              <div class="col-12  "> <ul class="d-flex justify-content-evenly  " style="list-style: none;"> <li  ><a href="" class="about-us">हमारे बारे में</a></li>
-              <li><a href="" class="about-us">प्राइवेसी पालिसी</a></li>
-            <li><a href=""class="about-us" >टर्म्स ऑफ यूज</a></li>
-          <li><a href="" class="about-us">संपर्क करें</a></li></ul>
-          <div class="text-center copyright">©2024 CRIMETAK. All rights reserved.</div>
-        
+          </p>
+          <iframe src="" frameborder="0"></iframe>
         </div>
-            </div>
-          </div>
-
-        </footer>
+        <div style="padding: 0px">
+          <router-outlet></router-outlet>
+        </div>
+        <app-footer  ></app-footer>
       </div>
-      <div class="col-4 right-nav pt-2  ">
-        <div class="suggetion-heading">
-          <a href="">#Topic</a>
-        </div>
-
-        <div>
-          <mat-chip-list
-            class="example-chip"
-            cdkDropList
-            cdkDropListOrientation="horizontal"
-          >
-            <mat-chip class="example-box" cdkDrag *ngFor="let topic of topics">
-              {{ topic.name }}
-            </mat-chip>
-          </mat-chip-list>
-          <div class="right-top-advertisement mt-2">
-            <p class="font-light text-slate-600   text-center py-0 my-0">
-              <small>ADVERTISEMENT</small>
-            </p>
-            <div class="ad-container mx-2">
-              <iframe 
-                src="" 
-                 
-                style="  overflow: hidden;" 
-                title="Advertisement">
-              </iframe>
+      <div class="col-3    "  >
+        <aside class="right-nav ">
+          <div class="suggetion-heading">
+            <a href="">#Topic</a>
+   
+          </div>
+  
+          <div>
+            <mat-chip-list
+              class="example-chip"
+              cdkDropList
+              cdkDropListOrientation="horizontal"
+            >
+              <mat-chip class="example-box" cdkDrag *ngFor="let topic of topics">
+                {{ topic.name }}
+              </mat-chip>
+            </mat-chip-list>
+            <div class="right-top-advertisement mt-2">
+              <p class="font-light text-slate-600 text-center py-0 my-0">
+                <small>ADVERTISEMENT</small>
+              </p>
+              <div class="ad-container mx-2">
+                <iframe src="" style="overflow: hidden" title="Advertisement">
+                </iframe>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="suggetion-heading">
-          <!-- <a href="">लेटेस्ट</a> -->
-           <h5>लेटेस्ट</h5>
-        </div>
-
-        <div>
-         
-          <div class="right-top-advertisement mt-2">
-            <p class="font-light text-slate-600   text-center py-0 my-0">
-              <small>ADVERTISEMENT</small>
-            </p>
-            <div class="ad-container mx-2">
-              <iframe 
-                src="" 
-                 
-                style="  overflow: hidden;" 
-                title="Advertisement">
-              </iframe>
+          <div class="suggetion-heading">
+            <h5>लेटेस्ट</h5>
+          </div>
+  
+          <div>
+            <div class="right-top-advertisement mt-2">
+              <p class="font-light text-slate-600 text-center py-0 my-0">
+                <small>ADVERTISEMENT</small>
+              </p>
+              <div class="ad-container mx-2">
+                <iframe src="" style="overflow: hidden" title="Advertisement">
+                </iframe>
+              </div>
             </div>
           </div>
-        </div>
+  
+          <app-top-button></app-top-button>
+        </aside>
 
-        <app-top-button></app-top-button>
+
+
+
       </div>
+ 
     </div>
   </div>
 

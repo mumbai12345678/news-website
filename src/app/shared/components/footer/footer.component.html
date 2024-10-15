@@ -1,0 +1,102 @@
+<footer class="row">
+    <div class="col-12 footer">
+      <div class="footer-content my-4 mx-0 py-2 px-1">
+        <h5
+          class="ps-3 fw-bold text-opacity-100"
+          style="color: rgb(115 119 126)"
+        >
+          लेटेस्ट आर्टिकल्स
+        </h5>
+        <div class="row">
+          <div class="col-6">
+            <ul>
+              <ng-container
+                *ngFor="let item of latestNews; let i = index"
+              >
+                <li *ngIf="i < 2" class="news-content py-2">
+                  <a>{{ item.heading }}</a>
+                </li>
+              </ng-container>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul>
+              <ng-container
+                *ngFor="let item of latestNews; let i = index"
+              >
+                <li *ngIf="i > 1" class="news-content py-2">
+                  <a>{{ item.heading }}</a>
+                </li>
+              </ng-container>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row py-3 mx-2 px-1">
+        <div class="col-5 d-flex">
+          <div>
+            <img
+              src="../assets/images/barcode.png"
+              alt=""
+              width="130px"
+              height="130px"
+            />
+          </div>
+          <div class="ps-3">
+            <h5 class="downloads">{{ downloads }}+ Downloads</h5>
+            <img
+              src="../assets/images/ios-store.png"
+              alt=""
+              width="120px"
+              class="py-2"
+            />
+            <img
+              src="../assets/images/googleplay.png"
+              alt=""
+              width="120px"
+            />
+          </div>
+        </div>
+        <div class="col-7">
+          <h4 class="fw-bold heading">डाउनलोड करें क्राइम तक ऐप</h4>
+          <h5 style="font-size: 14px; line-height: 1.6">
+            मजेदार फैक्ट, किस्से, क्विज़, रिव्यू और दुनिया भर की जानकारी.
+            जिसे पढ़कर आपको ‘फीलिंग गुड’ हो जाए और आप जरूरी जगहों पर जी-भर
+            चौड़े हो सकें.
+          </h5>
+          <div class="d-flex">
+            <span>Follow us on: </span>
+            <div class="footer-icon">
+              <i class="fa-brands fa-facebook-f text-light"></i>
+            </div>
+            <div class="footer-icon">
+              <i class="fa-brands fa-x-twitter text-light"></i>
+            </div>
+            <div class="footer-icon">
+              <i class="fa-brands fa-instagram text-light"></i>
+            </div>
+            <div class="footer-icon">
+              <i class="fa-brands fa-youtube text-light"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-4 my-3">
+        <div class="col-12">
+          <ul
+            class="d-flex justify-content-evenly"
+            style="list-style: none"
+          >
+            <li><a href="" class="about-us">हमारे बारे में</a></li>
+            <li><a href="" class="about-us">प्राइवेसी पालिसी</a></li>
+            <li><a href="" class="about-us">टर्म्स ऑफ यूज</a></li>
+            <li><a href="" class="about-us">संपर्क करें</a></li>
+          </ul>
+          <div class="text-center copyright">
+            ©2024 CRIMETAK. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>

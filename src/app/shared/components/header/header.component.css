@@ -1,0 +1,80 @@
+.top-nav {
+
+    height: 4rem;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 32px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 3%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    transition: top 0ms ease-in;
+  }
+  
+  /* Left side menus */
+  .nav-left {
+    display: flex;
+  }
+  
+  .menu-item {
+    font-size: 14px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #ddd;
+    /* Left border for separation */
+  
+  }
+  
+  .menu-item:nth-child(1) {
+    border-left: none !important
+      /* Remove left border for the first item */
+  }
+  
+  
+  
+  .menu-icon {
+    margin-right: 8px;
+    /* Space between icon and text */
+  }
+  
+  /* Right side search box */
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-container {
+    position: relative;
+    /* Allows positioning of the icon */
+    display: inline-block;
+    /* Make the container fit the input width */
+  }
+  
+  .search-box {
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    /* Adjust padding for the icon */
+    font-size: 1rem;
+    border: 1px solid #ecebeb;
+    border-radius: 25px;
+    outline: none;
+    width: 20rem;
+    background-color: #f7f7f7;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    /* Adjust as necessary for spacing */
+    transform: translateY(-50%);
+    /* Center the icon vertically */
+    color: #999;
+    /* Color of the icon */
+  }

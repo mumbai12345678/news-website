@@ -1,0 +1,21 @@
+.responsive-img{
+    border-radius: 5px;
+}
+.news-heading-content{
+  
+    font-weight: 800;
+ 
+    font-size: 15px;
+    line-height: 1.45rem;
+
+}
+.auther-name{
+    text-decoration: none;
+    color:brown;
+     
+}
+.date{
+    font-size: 13px;
+    color:rgb(107 114 128);
+    font-weight: 500;
+}

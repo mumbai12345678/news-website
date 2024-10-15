@@ -9,22 +9,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatChipsModule } from '@angular/material/chips';
 import { RouterModule } from '@angular/router';
 import { TopButtonComponent } from './pages/top-button/top-button.component';
-
+import { SharedModule } from './shared/shared.module';
+ 
  
  
  
 
 @NgModule({
   declarations: [
-   
+    
     AppComponent,
     HomeComponent,
     TopButtonComponent,
+    
 
     
   
   ],
-  imports: [ RouterModule,
+  imports: [ SharedModule,
+    
+    RouterModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

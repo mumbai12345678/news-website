@@ -1,0 +1,24 @@
+<header class="top-nav" [ngClass]="{ 'nav-visibility': isvisible }">
+    <div class="nav-left ps-2">
+      <div class="brand-logo">
+        <img
+          src="../assets/images/2.png"
+          alt="Brand Logo"
+          style="max-width: 100px; height: auto"
+        />
+      </div>
+      <div class="menu-item ps-4" *ngFor="let items of header">
+        <i [ngClass]="items.icon"></i> {{ items.title }}
+      </div>
+    </div>
+    <div class="nav-right pe-2">
+      <div class="search-container">
+        <input
+          type="text"
+          class="search-box"
+          placeholder="यहां खोज करें..."
+        />
+        <i class="fas fa-search search-icon"></i>
+      </div>
+    </div>
+  </header>
