@@ -1,8 +1,27 @@
-<aside class="  left-nav  " style="padding: 3rem 0px">
+<!-- <aside class="  left-nav  " style="padding: 3rem 0px">
     <a href="" *ngFor="let items of headers" class="left-nav-content">
       <div class="nav-item">
         <i class="fas fa-play-circle pe-2"> </i>
         {{ items.title }}
       </div>
     </a>
+  </aside> -->
+
+
+  <aside class="left-nav" style="padding: 2rem 0px">
+    <a href="#" *ngFor="let item of headers" class="left-nav-content" >
+      <div class="nav-item">
+        <i class="{{ item.icon }}"></i> 
+        {{ item.title }}
+  
+        
+        <i *ngIf="item.title === 'राज्य'" class="fas fa-chevron-right" style="float: right;"></i>
+      </div>
+      
+    
+      <ul *ngIf="item.title === 'राज्य'" class="dropdown-menu"  >
+        <li *ngFor="let state of states">{{ state }}</li>
+      </ul>
+    </a>
   </aside>
+  
