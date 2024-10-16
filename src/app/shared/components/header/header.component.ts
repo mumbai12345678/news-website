@@ -41,7 +41,7 @@ onWindowScroll(event: Event) {
   
   console.log('Scroll position:', scrollPosition);
 
-  if (scrollPosition >30) {
+  if (scrollPosition >10) {
        
     
 this.isvisible=true

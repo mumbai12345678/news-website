@@ -8,6 +8,7 @@ import { LeftNavbarComponent } from './components/left-navbar/left-navbar.compon
 import { MatChipsModule } from '@angular/material/chips';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RightNavbarComponent } from './components/right-navbar/right-navbar.component';
+import { TopButtonComponent } from '../pages/top-button/top-button.component';
  
  
 
@@ -20,8 +21,8 @@ import { RightNavbarComponent } from './components/right-navbar/right-navbar.com
     HeaderComponent,
     TopNavComponent,
     LeftNavbarComponent,
-    RightNavbarComponent
-    
+    RightNavbarComponent,
+    TopButtonComponent
   ],
   imports: [
     CommonModule,

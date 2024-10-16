@@ -24,21 +24,117 @@
         </div>
       </div>
     </div>
-    <div class="suggetion-heading">
-      <h5>लेटेस्ट</h5>
-    </div>
 
+    <!-- latest -->
+    <div class="suggetion-heading d-flex" style="justify-content: space-between;">
+      <div>
+        <h5 class="pt-3" >लेटेस्ट</h5>
+      </div>
+      <div class="pt-3" style="color: grey;">
+         <span class="view-more p-1" >और देखें</span> <span class="view-more"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+
+      </div>
+    </div>
+    
+<!-- ad, img -->
     <div>
       <div class="right-top-advertisement mt-2">
         <p class="font-light text-slate-600 text-center py-0 my-0">
-          <small>ADVERTISEMENT</small>
+          <!-- <small>ADVERTISEMENT</small> -->
         </p>
-        <div class="ad-container mx-2">
-          <iframe src="" style="overflow: hidden" title="Advertisement">
-          </iframe>
+        <div class="ad-container-img">
+          <img src="https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/670128bf5e33c-20241005-05533423-16x9.jpg?size=360:203" alt="CrimeTak" loading="lazy" title="आरोपी" class="w-full h-auto rounded-md object-fill img-size">
         </div>
+     
+      </div>
+      <div class="p-1">
+        <h4 class="article-head-title">पुणे में दोस्त संग घूमने गई थी 21 साल की लड़की, रात में सुनसान जगह 3 लड़कों ने पकड़ा, फिर किया गैंगरेप</h4>
       </div>
     </div>
 
-    <!-- <app-top-button  ></app-top-button> -->
+    <!-- news cards -->
+    <div>
+      <div class="right-top-advertisement-news-card mt-2">
+        <div *ngFor="let ad of advertisements">
+          <div class="article-container">
+            <div class="article-image">
+              <img 
+                [src]="ad.rightTopAdvertisement.articleContainer.articleImage.src"
+                [title]="ad.rightTopAdvertisement.articleContainer.articleImage.title"
+                [alt]="ad.rightTopAdvertisement.articleContainer.articleImage.alt"
+                [attr.loading]="ad.rightTopAdvertisement.articleContainer.articleImage.loading"
+                [attr.role]="ad.rightTopAdvertisement.articleContainer.articleImage.role"
+                [attr.height]="ad.rightTopAdvertisement.articleContainer.articleImage.height"
+                [attr.width]="ad.rightTopAdvertisement.articleContainer.articleImage.width"
+                class="h-20 min-w-[114px] md:h-24 sm:h-20 object-fill rounded-md xs:mt-[2px]"
+              />
+            </div>
+            <div class="article-content">
+              <h3 class="article-title">
+                {{ ad.rightTopAdvertisement.articleContainer.articleContent.articleTitle }}
+              </h3>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- trending videos -->
+    <div class="suggetion-heading d-flex" style="justify-content: space-between;">
+      <div class="pt-3">
+        <h5 >ट्रेंडिंग वीडियो</h5>
+
+      </div>
+      <div class="pt-3" style="color: grey;">
+         <span class="view-more p-1" >और देखें</span> <span class="view-more"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+
+      </div>
+    </div>
+<!-- ad -->
+    <div>
+      <div class="right-top-advertisement mt-2">
+        <p class="font-light text-slate-600 text-center py-0 my-0">
+          <!-- <small>ADVERTISEMENT</small> -->
+        </p>
+        <div class="ad-container-img">
+          <img src="https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/670128bf5e33c-20241005-05533423-16x9.jpg?size=360:203" alt="CrimeTak" loading="lazy" title="आरोपी" class="w-full h-auto rounded-md object-fill img-size">
+        </div>
+     
+      </div>
+      <div class="p-1">
+        <h4 class="article-head-title">एक नारी सब पर भारी, 3 लुटेरों से अकेले भिड़ गई पंजाब की महिला, viral हुआ cctv video</h4>
+      </div>
+    </div>
+
+    <!-- news cards -->
+    <div>
+      <div class="right-top-advertisement-news-card mt-2">
+        <div *ngFor="let ad of advertisements">
+          <div class="article-container">
+            <div class="article-image">
+              <img 
+                [src]="ad.rightTopAdvertisement.articleContainer.articleImage.src"
+                [title]="ad.rightTopAdvertisement.articleContainer.articleImage.title"
+                [alt]="ad.rightTopAdvertisement.articleContainer.articleImage.alt"
+                [attr.loading]="ad.rightTopAdvertisement.articleContainer.articleImage.loading"
+                [attr.role]="ad.rightTopAdvertisement.articleContainer.articleImage.role"
+                [attr.height]="ad.rightTopAdvertisement.articleContainer.articleImage.height"
+                [attr.width]="ad.rightTopAdvertisement.articleContainer.articleImage.width"
+                class="h-20 min-w-[114px] md:h-24 sm:h-20 object-fill rounded-md xs:mt-[2px]"
+              />
+            </div>
+            <div class="article-content">
+              <h3 class="article-title">
+                {{ ad.rightTopAdvertisement.articleContainer.articleContent.articleTitle }}
+              </h3>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <app-top-button></app-top-button>
   </aside>

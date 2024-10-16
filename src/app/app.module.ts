@@ -10,6 +10,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { RouterModule } from '@angular/router';
 import { TopButtonComponent } from './pages/top-button/top-button.component';
 import { SharedModule } from './shared/shared.module';
+import { TopNewsComponent } from './pages/top-news/top-news.component';
  
  
  
@@ -20,11 +21,7 @@ import { SharedModule } from './shared/shared.module';
     
     AppComponent,
     HomeComponent,
-    TopButtonComponent,
-    
-
-    
-  
+    TopNewsComponent,
   ],
   imports: [ SharedModule,
     

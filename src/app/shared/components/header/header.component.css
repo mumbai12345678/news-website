@@ -78,3 +78,8 @@
     color: #999;
     /* Color of the icon */
   }
+  .nav-visibility {
+    top: 0px;
+    transition: top 10ms linear ;
+  }
+   

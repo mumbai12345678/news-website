@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
    }]
 
    news: any[] = [
-    {
+    { 
       type: "news",
       newsTitle: "बड़ी खबरें",
       headlineImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/6700e038e0c48-nia-dsp-arrested-054407824-16x9.jpg?size=360:203",
