@@ -1,0 +1,44 @@
+<aside class="right-nav  pt-2">
+    <div class="suggetion-heading">
+      <a href="">#Topic</a>
+
+    </div>
+
+    <div>
+      <mat-chip-list
+        class="example-chip"
+        cdkDropList
+        cdkDropListOrientation="horizontal"
+      >
+        <mat-chip class="example-box" cdkDrag *ngFor="let topic of topics">
+          {{ topic.name }}
+        </mat-chip>
+      </mat-chip-list>
+      <div class="right-top-advertisement mt-2">
+        <p class="font-light text-slate-600 text-center py-0 my-0">
+          <small>ADVERTISEMENT</small>
+        </p>
+        <div class="ad-container mx-2">
+          <iframe src="" style="overflow: hidden" title="Advertisement">
+          </iframe>
+        </div>
+      </div>
+    </div>
+    <div class="suggetion-heading">
+      <h5>लेटेस्ट</h5>
+    </div>
+
+    <div>
+      <div class="right-top-advertisement mt-2">
+        <p class="font-light text-slate-600 text-center py-0 my-0">
+          <small>ADVERTISEMENT</small>
+        </p>
+        <div class="ad-container mx-2">
+          <iframe src="" style="overflow: hidden" title="Advertisement">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- <app-top-button  ></app-top-button> -->
+  </aside>

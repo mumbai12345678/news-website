@@ -1,0 +1,83 @@
+.right-nav {
+  
+    max-height:fit-content;
+    background-color: rgb(255, 255, 255);
+     
+  position:sticky;
+  bottom: 0;
+  right:0;
+  top:0;
+    border-left: 1px solid #e5e7eb;
+    padding-left: 8px;
+    width: 331px;
+     
+   
+  
+   
+     
+  
+    .mat-chip.mat-standard-chip {
+      background-color: #fbfbfb;
+      color: rgba(0, 0, 0, .87);
+      border: 1px solid gray;
+    }
+  /* .bar{
+    height: 100%;
+    position: sticky;
+    top:0px
+  
+  } */
+  
+  }
+  .example-box.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  
+  .example-chip .cdk-drop-list-dragging {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  
+  .suggetion-heading {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    color:rgb(183 31 51);
+    padding-bottom: 10px;
+    
+  
+    a {
+      text-decoration: none;
+      color:rgb(183 31 51);
+      font-weight: 700;
+    }
+  }
+  
+  /* ========================rightnav css= */
+  .right-top-advertisement {
+    height: 18.125rem;
+    background-color: rgb(243 244 246);
+    font-size: 12px;
+    color: #747474;
+  
+    .ad-container {
+      overflow: hidden;
+      text-align: center;
+      border: 1px solid rgb(159 145 145);
+      height: 16.125rem;
+      width: inherit;
+      background-color: white;
+  
+    }
+     
+   }
+   .top {
+    position: fixed; 
+    bottom: 86px;
+    right: 23px;
+  }.top-ad-container{
+    height: 8.125rem;
+    background-color: rgb(243 244 246);
+    margin-top: 8px;
+  }
+   
+    
