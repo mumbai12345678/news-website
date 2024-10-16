@@ -1,6 +1,10 @@
 .responsive-img{
     border-radius: 5px;
 }
+.link{
+    text-decoration: none;
+    color: black;
+}
 .news-heading-content{
   
     font-weight: 800;
@@ -12,6 +16,7 @@
 .auther-name{
     text-decoration: none;
     color:brown;
+    font-size: 15px;
      
 }
 .date{
@@ -23,3 +28,47 @@
     --bs-gutter-x: 0rem;
     --bs-gutter-y:0rem
 }
+/* ====================headline============ */
+.headline-container{
+    height: 96px;
+}
+.headline{
+    width: 406.56px;
+    .headline-img{
+        border-radius: .375rem;
+
+    }
+   
+    .headline-content{
+        
+            font-size:  17px;
+    line-height: 1.75rem;
+    font-weight: 800;
+    }
+    
+    
+}
+
+ 
+
+   .news{
+    .news-title{
+        font-size: 20px;
+        color:#B71F33;
+        font-weight: 700;
+    }
+     
+
+   }
+   .sub-img{
+    width: 140px;
+    height: 98px;
+    border-radius: 5px;
+}
+.sub-con{
+width: 266px;
+font-size: 16px;
+font-weight: 700;
+ 
+}
+ 
