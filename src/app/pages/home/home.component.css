@@ -5,6 +5,10 @@
     text-decoration: none;
     color: black;
 }
+.title-link{
+    text-decoration: none;
+    color:#B71F33;
+}
 .news-heading-content{
   
     font-weight: 800;
@@ -30,10 +34,10 @@
 }
 /* ====================headline============ */
 .headline-container{
-    height: 96px;
+    /* height: 96px; */
 }
 .headline{
-    width: 406.56px;
+    /* width: 406.56px; */
     .headline-img{
         border-radius: .375rem;
 
@@ -51,24 +55,49 @@
 
  
 
-   .news{
+    
     .news-title{
         font-size: 20px;
         color:#B71F33;
         font-weight: 700;
-    }
+  
      
 
    }
    .sub-img{
-    width: 140px;
-    height: 98px;
+    /* width: 140px; */
+    /* height: 98px; */
     border-radius: 5px;
 }
 .sub-con{
-width: 266px;
+/* width: 266px; */
 font-size: 16px;
 font-weight: 700;
  
 }
- 
+    .sub-heading
+{
+    /* height: 98px; */
+    .sub-img{
+        /* width: 140px; */
+     
+        border-radius: 5px;
+    }
+    
+} 
+
+/* =================cars============= */
+.custom-carousel-icon {
+    color: rgb(233, 27, 27) !important; /* Icon color */
+    background-color: rgb(0, 0, 0) !important; /* Background color */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    opacity: 1 !important; /* Ensure full opacity */
+    border-radius: 50%; /* Make it round */
+    width: 40px; /* Adjust the width */
+    height: 40px; /* Adjust the height */
+    background-size: 20px; /* Icon size */
+    background-position: center;
+  }
+  
+  /* Remove or customize hover and active styles */
+   
