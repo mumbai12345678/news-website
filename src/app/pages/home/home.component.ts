@@ -56,6 +56,27 @@ export class HomeComponent implements OnInit {
             autherName:" Parivesh Gupta"}
   ]
 
+  visualStories:any[]=[{
+    imgUrl:"https://cf-img-a-in.tosshub.com/sites/visualstory/crimetak/uploads/2024/09/cropped-fgjgfjgj.jpg?size=*:900",
+    cardTitle:"ट्रेंडिंग",
+    cardText:"Coldplay कॉन्सर्ट की टिकट को लेकर India में धांधली?"
+  },
+  {
+    imgUrl:"https://cf-img-a-in.tosshub.com/sites/visualstory/crimetak/uploads/2024/09/cropped-hdguihsgih.jpg?size=*:900",
+    cardTitle:"ट्रेंडिंग",
+    cardText:"Coldplay कॉन्सर्ट की टिकट को लेकर India में धांधली?"
+  },
+  {
+    imgUrl:"https://cf-img-a-in.tosshub.com/sites/visualstory/crimetak/uploads/2024/09/cropped-fgjgfjgj.jpg?size=*:900",
+    cardTitle:"ट्रेंडिंग",
+    cardText:"Coldplay कॉन्सर्ट की टिकट को लेकर India में धांधली?"
+  },
+  {
+    imgUrl:"https://cf-img-a-in.tosshub.com/sites/visualstory/crimetak/uploads/2024/09/cropped-jsdijgigj.jpg?size=*:900",
+    cardTitle:"ट्रेंडिंग",
+    cardText:"Coldplay कॉन्सर्ट की टिकट को लेकर India में धांधली?"
+  }
+]
 
   constructor() { }
 

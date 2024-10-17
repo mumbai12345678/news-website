@@ -26,9 +26,9 @@
 .left-nav {
   background-color: #ffffff;
   height: 100vh;
-  position: fixed;
+  position: sticky;
   top: 4rem;
-  width: 177px;
+  
   border: 1px solid rgb(229, 231, 235);
 }
 

@@ -1,5 +1,7 @@
  
-
+.layout{
+  --bs-gutter-x: 1rem;
+}
  
  
 /* .bar{
@@ -10,18 +12,16 @@
 } */
 
  
-
-.layout {
-  --bs-gutter-x: 0rem;
-  --bs-gutter-y:0rem
-}
+ 
 
 /* ==============topnav */
 /* Style for the top navigation */
  
 
 
-
+/* .custom-container{
+  --bs-gutter-x: 0rem !important 
+} */
 
 
  
