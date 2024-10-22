@@ -18,16 +18,17 @@ export class HomeComponent implements OnInit {
       type: "news",
       newsTitle: "बड़ी खबरें",
       headlineImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/6700e038e0c48-nia-dsp-arrested-054407824-16x9.jpg?size=360:203",
-      headlineVideoUrl: "https://www.crimetak.in/top-news/video/hooliganism-is-a-sin-police-is-our-father-police-organized-a-parade-of-goons-by-getting-their-heads-shaved-took-out-a-procession-watch-video-3016107-2024-07-24",
+      headlineVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/video/202410/66fe5071cca1e-punjab-viral-video-030608830-16x9.jpg?size=360:203",
       headlineContent: "NIA का रिश्वतखोर डीएसपी, 20 लाख कैश लेते CBI ने पकड़ा, NIA का DSP बोला- AK-47 रखवाकर अरेस्ट करवा दूंगा",
       subNewsImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/66fe4a3ac2436-an-12-transport-plane-crash-thomas-cherian-033937552-16x9.jpg?size=280:180",
-      subNewsVideoUrl: "https://www.crimetak.in/top-news/video/watch-video-visuals-of-protesters-looting-things-and-lying-on-sheikh-hasinas-bed-in-her-residence-go-viral-3018585-2024-08-05",
+      subNewsVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/video/202407/66a0c21093b79-crime-news-245751616-16x9.png?size=280:180",
       subNewsContent: "56 सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!",
       autherName:" Parivesh Gupta",
      
       
-    },
-
+    }, 
+    
+    
     // {
     //   type: "advertisement",
     //   adImgUrl: "https://example.com/path-to-your-advertisement.jpg",
@@ -39,19 +40,19 @@ export class HomeComponent implements OnInit {
 
   relatedNews:any[]=[
     {subNewsImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/66fe4a3ac2436-an-12-transport-plane-crash-thomas-cherian-033937552-16x9.jpg?size=280:180",
-      subNewsVideoUrl: "https://www.crimetak.in/top-news/video/watch-video-visuals-of-protesters-looting-things-and-lying-on-sheikh-hasinas-bed-in-her-residence-go-viral-3018585-2024-08-05",
+      subNewsVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/video/202407/66a0c21093b79-crime-news-245751616-16x9.png?size=280:180",
       subNewsContent: "56 सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!",
       autherName:" Parivesh Gupta"},
       {subNewsImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/66fe4a3ac2436-an-12-transport-plane-crash-thomas-cherian-033937552-16x9.jpg?size=280:180",
-        subNewsVideoUrl: "https://www.crimetak.in/top-news/video/watch-video-visuals-of-protesters-looting-things-and-lying-on-sheikh-hasinas-bed-in-her-residence-go-viral-3018585-2024-08-05",
+        subNewsVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/video/202407/66a0c21093b79-crime-news-245751616-16x9.png?size=280:180",
         subNewsContent: "56 सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!",
         autherName:" Parivesh Gupta"},
         {subNewsImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/66fe4a3ac2436-an-12-transport-plane-crash-thomas-cherian-033937552-16x9.jpg?size=280:180",
-          subNewsVideoUrl: "https://www.crimetak.in/top-news/video/watch-video-visuals-of-protesters-looting-things-and-lying-on-sheikh-hasinas-bed-in-her-residence-go-viral-3018585-2024-08-05",
+          subNewsVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/video/202407/66a0c21093b79-crime-news-245751616-16x9.png?size=280:180",
           subNewsContent: "56 सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!",
           autherName:" Parivesh Gupta"},
           {subNewsImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/66fe4a3ac2436-an-12-transport-plane-crash-thomas-cherian-033937552-16x9.jpg?size=280:180",
-            subNewsVideoUrl: "https://www.crimetak.in/top-news/video/watch-video-visuals-of-protesters-looting-things-and-lying-on-sheikh-hasinas-bed-in-her-residence-go-viral-3018585-2024-08-05",
+            subNewsVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/video/202407/66a0c21093b79-crime-news-245751616-16x9.png?size=280:180",
             subNewsContent: "56 सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!",
             autherName:" Parivesh Gupta"}
   ]

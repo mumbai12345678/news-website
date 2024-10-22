@@ -34,23 +34,23 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  @HostListener('window:scroll', [])
-onWindowScroll(event: Event) {
-  let scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+//   @HostListener('window:scroll', [])
+// onWindowScroll(event: Event) {
+//   let scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
   
   
-  console.log('Scroll position:', scrollPosition);
+//   console.log('Scroll position:', scrollPosition);
 
-  if (scrollPosition >10) {
+//   if (scrollPosition >10) {
        
     
-this.isvisible=true
-  }
-  else{
-    this.isvisible=false
-  }
+// this.isvisible=true
+//   }
+//   else{
+//     this.isvisible=false
+//   }
   
  
-}
+// }
 
 }

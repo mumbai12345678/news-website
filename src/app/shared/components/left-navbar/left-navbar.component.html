@@ -8,7 +8,7 @@
   </aside> -->
 
 
-  <aside class="left-nav" style="padding: 2rem 0px">
+  <aside class="left-nav" style="padding: 1rem">
     <a href="#" *ngFor="let item of headers" class="left-nav-content" >
       <div class="nav-item">
         <i class="{{ item.icon }}"></i> 
@@ -16,6 +16,7 @@
   
         
         <i *ngIf="item.title === 'राज्य'" class="fas fa-chevron-right" style="float: right;"></i>
+       
       </div>
       
     
@@ -23,5 +24,20 @@
         <li *ngFor="let state of states">{{ state }}</li>
       </ul>
     </a>
+    <div class="d-flex justify-content-around  mt-5">
+      
+      <div class="footer-icon">
+        <i class="fa-brands fa-facebook-f  "></i>
+      </div>
+      <div class="footer-icon">
+        <i class="fa-brands fa-x-twitter  "></i>
+      </div>
+      <div class="footer-icon">
+        <i class="fa-brands fa-instagram  "></i>
+      </div>
+      <div class="footer-icon">
+        <i class="fa-brands fa-youtube  "></i>
+      </div>
+    </div>
   </aside>
   

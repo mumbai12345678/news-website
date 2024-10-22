@@ -1,3 +1,35 @@
+
+.view-more{
+    cursor: pointer;
+    font-weight: 300;
+    font-size: small;
+    vertical-align:middle;
+     
+  }
+  /* .view-more i{
+    border: 1px solid gray;
+    width: 16px ;
+    height: 16px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 10px;
+    vertical-align: middle;
+     
+  } */
+  .vm{
+    border: 1px solid gray;
+    width: 16px ;
+    height: 16px;
+    border-radius: 50%;
+    
+    font-size: 10px;
+     text-align: center;
+     line-height: 14px;
+ 
+ 
+    
+  }
+
 .responsive-img{
     border-radius: 5px;
 }
@@ -100,4 +132,13 @@ font-weight: 700;
   }
   
   /* Remove or customize hover and active styles */
-   
+  .news-video{
+    position: relative;
+  }
+  /* =====================ad============= */
+  .top-ad-container{
+    height: 8.125rem;
+    background-color: rgb(243 244 246);
+    margin-top: 8px;
+    
+  }

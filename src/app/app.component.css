@@ -49,3 +49,11 @@ height: 100vw;
   background-color: rgb(243 244 246);
   margin-top: 8px;
 }
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/* ==========================media query=============== */
+ 

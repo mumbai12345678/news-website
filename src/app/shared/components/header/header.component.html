@@ -1,15 +1,24 @@
 <header class="top-nav" [ngClass]="{ 'nav-visibility': isvisible }">
     <div class="nav-left ps-2">
-      <div class="brand-logo">
-        <img
+
+      
+      <div   >
+
+        
+        <img class="brand-logo-lg"
           src="../assets/images/2.png"
           alt="Brand Logo"
           style="max-width: 100px; height: auto"
         />
+        
       </div>
-      <div class="menu-item ps-4" *ngFor="let items of header">
-        <i [ngClass]="items.icon"></i> {{ items.title }}
-      </div>
+      <div
+    class="menu-item ps-4"
+    *ngFor="let items of header; let i = index"
+    [class.first-item]="i === 0"
+>
+    <i [ngClass]="items.icon"></i> {{ items.title }}
+</div>
     </div>
     <div class="nav-right pe-2">
       <div class="search-container">

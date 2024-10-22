@@ -20,7 +20,7 @@ export class FooterComponent implements OnInit {
         heading:"8 साल की उम्र में पिता की हत्या देखी, 22 साल बाद फिल्मी अंदाज में लिया मौत का बदला"
          }
   ]
-  downloads:number=3
+  downloads:number=1
 
   constructor() { }
 
