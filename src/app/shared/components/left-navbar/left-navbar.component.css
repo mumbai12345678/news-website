@@ -1,45 +1,31 @@
-/* .left-nav {
-    background-color: #ffffff;
-  
-    height: 100vh;
-    position: fixed;
-    top: 4rem;
-    width: 177px;
-    border: 1px solid rgb(229 231 235);
-  
-  
-  }
-  .left-nav-content{
-    color: black;
-    text-decoration: none;
-  
-    .nav-item {
-      padding: 10px 10px;
-      font-size: 14px;
-      font-weight: 500;
-    }
-  } */
+.left-media-icon {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+}
 
-
-
-  .footer-icon{
-    display: flex;align-items: center;justify-content: center; color: #B71F33;
-    width: 28px;height: 28px;border-radius: 50%;
-    border:2px solid rgb(248 233 235);
-    font-size: 12px;
-    
-    
-  }
+.footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b71f33;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid rgb(248 233 235);
+  font-size: 12px;
+  margin: 0px 5px;
+}
 .left-nav {
   background-color: #ffffff;
-       align-self: baseline;
-  position:  sticky;
-   top:64px;
-  
-  height: calc(100vh - 64px); ;bottom: 0px;
-    border-right: 1px solid rgb(229 231 235)
-  
- ;  
+  align-self: baseline;
+  position: sticky;
+  top: 64px;
+
+  height: calc(100vh - 64px);
+  bottom: 0px;
+  border-right: 1px solid rgb(229 231 235);
 }
 
 .left-nav-content {
@@ -50,21 +36,19 @@
 }
 
 .nav-item {
-  padding: 14px 10px;
+  padding: 14px 14px;
   font-size: 14px;
   font-weight: 500;
 }
-.nav-item:hover{
+.nav-item:hover {
   background-color: rgb(248 233 235);
- 
-
 }
 
 .dropdown-menu {
   list-style: inside;
   padding-left: 0;
   position: absolute;
-  left: 180px;
+  left: 175px;
   bottom: 20px;
   background-color: white;
   border: 1px solid #e5e7eb;
@@ -75,7 +59,6 @@
   overflow-y: auto;
   max-height: fit-content;
   padding: 0;
-
 }
 
 .left-nav-content:hover .dropdown-menu {
@@ -90,14 +73,11 @@
 
 .dropdown-menu li:hover {
   background-color: #f0f0f0;
-
 }
-a:hover{
-color: rgb(183 31 51);
+a:hover {
+  color: rgb(183 31 51);
 }
- 
 
-li:hover{
+li:hover {
   background-color: rgb(248 233 235) !important;
-  
 }

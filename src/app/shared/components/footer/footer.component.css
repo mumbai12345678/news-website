@@ -43,5 +43,8 @@
     } 
     .copyright{
       font-size: 15px;
+      font-weight:200;
+      color: rgb(0, 0, 0);
+ 
     }
   }

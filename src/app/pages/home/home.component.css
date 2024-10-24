@@ -142,3 +142,10 @@ font-weight: 700;
     margin-top: 8px;
     
   }
+  .cardTitle{
+      color:#B71F33;
+      font-weight: 600;
+  }
+  .cardContent{
+    text-align: justify;font-size: 16px;font-weight: 700;
+  }

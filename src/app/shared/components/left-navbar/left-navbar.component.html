@@ -8,7 +8,7 @@
   </aside> -->
 
 
-  <aside class="left-nav" style="padding: 1rem">
+  <aside class="left-nav" style="  ;z-index: 10;">
     <a href="#" *ngFor="let item of headers" class="left-nav-content" >
       <div class="nav-item">
         <i class="{{ item.icon }}"></i> 
@@ -20,11 +20,11 @@
       </div>
       
     
-      <ul *ngIf="item.title === 'राज्य'" class="dropdown-menu"  >
+      <ul *ngIf="item.title === 'राज्य'" class="dropdown-menu"    >
         <li *ngFor="let state of states">{{ state }}</li>
       </ul>
     </a>
-    <div class="d-flex justify-content-around  mt-5">
+    <div class="  left-media-icon "  >
       
       <div class="footer-icon">
         <i class="fa-brands fa-facebook-f  "></i>
