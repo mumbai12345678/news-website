@@ -1,7 +1,7 @@
 .top-nav {
 
-    height: 4rem;
-    width: 100%;
+    height: 4.875rem;
+    width: 100% ;
     background-color: rgb(255, 255, 255);
     /* position: fixed;
     top: 32px;
@@ -10,17 +10,26 @@
     z-index: 1000 */
   
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+   
+    
+  }
+
+  .top-nav1{
+    height: 4rem;
+      padding: 0 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    transition: top 0ms ease-in;
   }
   
   /* Left side menus */
   .nav-left {
     display: flex;
   }
+   
   
   .menu-item {
     font-size: 16px;
@@ -48,6 +57,7 @@
   
   /* Right side search box */
   .nav-right {
+    /* padding-right: 26px; */
     display: flex;
     align-items: center;
   }
@@ -60,6 +70,7 @@
   }
   
   .search-box {
+
     padding: 0.5rem 2rem 0.5rem 1rem;
     /* Adjust padding for the icon */
     font-size: 1rem;
@@ -81,23 +92,221 @@
     color: #999;
     /* Color of the icon */
   }
-  .nav-visibility {
-    top: 0px;
-    transition: top 10ms linear ;
+   
+
+  .dropdown-menu {
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: transform 1000ms ease-out, opacity 0.3s ease-out;
+    visibility: hidden; /* Prevent it from taking up space when hidden */
+  }
+  
+  /* On show, animate from left to right */
+  .show.dropdown-menu {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
   }
    
-  @media screen and (max-width:768px
-  ) {
+ 
+     
+  @media  (min-width:100px
+  ) and (max-width:768px) {
+
+  
     .brand-logo-lg{
-     display: none;
-    }
-     
-  }
-     
-  @media screen and (min-width:769px
-  ) {
-    .toggler {
       display: none;
-    }
+     }
+     .top-nav1{
+      height: 3rem;
+      width: 100%;
+      
+     }
+     .menu-item{
+       display:  none;
+     }
+
+.res-nav{
+  display: inline;
+  i{
+    font-size: 0.3px;
+  }
+
+}
+
+    
 
   }
+
+
+  /* =====================res=========== */
+ /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Hamburger Icon */
+.bar-icon {
+  font-size: 30px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+/* Overlay Sidebar */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+  overflow-x: hidden;
+  transition: width 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 12;
+}
+
+/* Open State for Sidenav */
+.sidenav.open {
+  width: 100%;
+}
+
+/* Close Button (White Color) */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #f1c40f; /* Yellow on hover */
+}
+
+/* Navbar Links */
+.sidenav a {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: color 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1c40f; /* Yellow on hover */
+}
+
+
+
+
+  @media  (min-width:320px) and (max-width:768px) {
+    .links a{
+      padding: 0px 8px;
+       color: black;
+      white-space:nowrap;
+      font-weight: 400;
+
+      
+    }
+    .links a:hover{
+      color: #a30010;
+      text-decoration: none;
+    }
+    .links{
+      /* overflow-x:scroll; */
+  
+      overflow-x: auto;
+      scrollbar-width: none;
+      display: flex;
+  flex-wrap: nowrap; /* Ensure items are aligned in a single row */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  
+    }
+    .toggle{
+      display: none;
+    }
+.aside-header{
+  height: 105px;background-color: #a30010;width: 100%;
+
+}
+
+    .search-box{
+      width: 150px !important;
+      padding: 0.3rem 2rem 0.1rem 1rem;
+   
+       
+    }
+    .search-icon{
+      top: 50%;
+      right: 20px;
+    }
+    .res-search{
+      width: 90% !important ;
+      border-radius: 5px  ; margin: 0% 5%; 
+
+    }
+    .sidenav{
+      justify-content: initial;
+      align-items: initial;
+    }
+ 
+      
+  }
+  .dropend{
+  .colap{
+    width: 100vw;
+    height: 100vh;
+   
+      position: absolute;
+      transform: translate(-27px, -38px) !important;
+      
+ 
+   
+
+    
+  }
+.toggle{
+  display: none;
+  transition: display 1000ms ease-in-out;
+}
+   
+   
+   
+  }
+
+
+  /* ==============dekstop media============== */
+@media   (min-width:769px) {
+  .links{
+    display: none ;
+  }
+  
+
+  .brand-logo-sm{
+    display: none;
+   }
+   .res-sidenav{
+    display:none
+  }
+  .responsive-icon{
+      display: none;
+  }
+  
+}
+
+  

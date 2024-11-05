@@ -1,28 +1,32 @@
-<header class="top-nav" [ngClass]="{ 'nav-visibility': isvisible }">
-    <div class="nav-left ps-2">
+<header class="top-nav"   >
+   
+      
+       <div class="top-nav1">
+        <div class="nav-left ">
 
       
-      <div   >
-
-        
-        <img class="brand-logo-lg"
-          src="../assets/images/2.png"
-          alt="Brand Logo"
-          style="max-width: 100px; height: auto"
-        />
-        
-      </div>
-      <div
-    class="menu-item ps-4"
-    *ngFor="let items of header; let i = index"
-    [class.first-item]="i === 0"
->
-    <i [ngClass]="items.icon"></i> {{ items.title }}
-</div>
-    </div>
-    <div class="nav-right pe-2">
-      <div class="search-container">
-        <input
+          <div   class=" d-flex     " >
+           <!-- ==================toggler start============== -->
+  
+           
+          <div class="res-sidenav bg-light">
+          <!-- Hamburger Icon -->
+   
+  <i class="fa-solid fa-bars-staggered  text-dark fs-5  pe-3 " (click)="openNav()" ></i>
+  <!-- Side Navbar -->
+  <div id="mySidenav" class="sidenav  " [ngClass]="{ 'open': isOpen }"  style="background-color: rgb(255, 255, 255);  ">
+    <!-- Close Button (White Color) -->
+     
+    <div class="aside-header"    >
+      <img class="brand-logo-sm"
+      src="../assets/images/2_prev_ui.png"
+      alt="Brand Logo"
+      style="max-width: auto; height: 32px  "
+    />
+    <!-- <button class="close-btn" (click)="closeNav()">&#10005;</button> -->
+    <div>
+      <div    >
+        <input  class="search-container  res-search "  
           type="text"
           class="search-box"
           placeholder="यहां खोज करें..."
@@ -30,4 +34,85 @@
         <i class="fas fa-search search-icon"></i>
       </div>
     </div>
+  
+  
+    </div >
+    
+    <!-- Navbar Links -->
+    
+    <a routerLink="/">Home</a>
+    <a routerLink="/about">About</a>
+    <a routerLink="/services">Services</a>
+    <a routerLink="/contact">Contact</a>
+  </div>
+  
+          </div>
+          <!-- =================TE================== -->
+  
+   
+   
+            <!-- <i class="fa-solid fa-bars toggler"></i> -->
+            <img class="brand-logo-lg"
+              src="../assets/images/2.webp"
+              alt="Brand Logo"
+              style="max-width: 100px; height: auto"
+            />
+            
+            <img class="brand-logo-sm"
+              src="../assets/images/2.webp"
+              alt="Brand Logo"
+              style="max-width: auto; height: 32px  "
+            />
+            
+          </div>
+          <div
+        class="menu-item   ps-4"
+        *ngFor="let items of header; let i = index"
+        [class.first-item]="i === 0"
+    >
+        <i [ngClass]="items.icon"></i> {{ items.title }}
+    </div>
+        </div>
+        <div class="nav-right "  >
+          <div class="search-container" [ngClass]="{'toggle':  resSearchToggler}">
+            <input
+              type="text"
+              class="search-box"
+              placeholder="यहां खोज करें..."
+            />
+           
+          </div>
+            
+          <div class="  responsive-icon   d-md-none d-block      " id="res-search" style="display: flex; align-items: center; justify-content: center;width: 22px; font-size: 18px;color: rgb(39, 39, 39);"><i  class="fas fa-search       " (click)="searchToggler()"></i>
+            <!-- mob view -->
+             </div>
+<!-- <div class="d-none d-md-block">
+web show
+</div>   -->
+        </div>
+       </div>
+      
+  
+      <div  class="links" > 
+        <a href="" *ngFor="let item of res_nav"> <i [ngClass]="item.icon"></i>
+          {{item.title}}
+        </a> 
+       
+     
+      </div>
+  
+      
+      <!-- <i class="fa-solid fa-xmark res-search"></i> -->
+      <!-- class="fas fa-search  res-search " -->
+  
+<!-- ======================responsive-nav========= -->
+<!-- <div class="d-flex">
+  <a 
+class=" res-nav    ps-4"
+*ngFor="let items of res_nav; let i = index"
+[class.first-item]="i === 0"
+>
+<i [ngClass]="items.icon"></i>  <span>{{ items.title }}</span>
+</a>
+ </div> -->
   </header>

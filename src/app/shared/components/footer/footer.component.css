@@ -1,5 +1,9 @@
 
- 
+ .row{
+   
+      margin-right: -10px;
+      margin-left: -10px;
+    }
 .footer{
     height: 
     30rem;
@@ -9,10 +13,11 @@
       font-size: 14px;
       color:#64748B;
       text-decoration: none;
-      
+     
       
       
     }
+    
 
     .footer-content
     {

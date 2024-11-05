@@ -1,7 +1,5 @@
  
-.layout{
-  --bs-gutter-x: 1rem;
-}
+ 
  
  
 /* .bar{
@@ -28,7 +26,7 @@
 
 
 .main-content {
-height: 100vw;
+height: 100vh;
  
  
 }
@@ -49,11 +47,32 @@ height: 100vw;
   background-color: rgb(243 244 246);
   margin-top: 8px;
 }
-body{
-  margin: 0px;
-  padding: 0px;
-}
+  
 
 
 /* ==========================media query=============== */
- 
+  @media screen  and (max-width:768px){
+    .top-nav{
+      display: none;
+    }
+     
+    
+  }
+
+  @media  (min-width:320px) and (max-width:768px) {
+    .left-navbar{
+      display: none;
+    }
+    .outlet-content{
+      width: 100%;
+    }
+    .right-bar{
+      display: none;
+    }
+    .left-aside{
+      display: none;
+    }
+    .right-aside{
+      display: none;
+    }
+  }
