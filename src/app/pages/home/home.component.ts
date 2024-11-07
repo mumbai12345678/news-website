@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+ 
   newsTitle="बड़ी खबरें"
   autherName=" Parivesh Gupta";
   date :Date= new Date();
@@ -83,5 +84,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
 }
