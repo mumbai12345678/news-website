@@ -142,3 +142,10 @@ font-weight: 700;
     margin-top: 8px;
     
   }
+  /* =================media query============ */
+@media (min-width:320px) and (max-width:768px) {
+    .res-ad{
+        display: none;
+    }
+    
+}

@@ -1,12 +1,11 @@
 
  .row{
    
-      margin-right: -10px;
-      margin-left: -10px;
+      margin-right: -8px;
+      margin-left: -8px;
     }
 .footer{
-    height: 
-    30rem;
+     height: fit-content;
     width: 100%;
     background-color:  rgb(243 244 246);
     .news-content{
@@ -49,4 +48,49 @@
     .copyright{
       font-size: 15px;
     }
+  }
+  
+  @media  (min-width:320px) and (max-width:768px) {
+    .barcode{
+      margin-top: 1.8rem;
+      margin-right: 22px;
+    }
+    .about-us{
+      padding-left: 3px !important;
+      padding-right:3px !important
+      ;
+      white-space: nowrap;
+      font-size: 14px;
+     
+    }
+   
+      .footer-icon{
+        width: 20px !important;
+        height: 20px !important;
+        margin-left: 0px !important;
+      
+       font-size: 10px;
+      }
+  
+    .res-font{
+      font-size: 14px;
+    }
+    .res-img{
+      max-width: 120px;
+      max-height: 120px;
+    }
+    .footer-img{
+      display: none;
+    }
+    
+  }
+  @media  (min-width:769px) {
+    .barcode{
+      margin-right: 16px;
+      
+    }
+    .downloads-link{
+      padding-left: 60px;
+    }
+    
   }

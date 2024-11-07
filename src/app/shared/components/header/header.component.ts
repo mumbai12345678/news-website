@@ -47,13 +47,13 @@ export class HeaderComponent implements OnInit {
 
     },
     {
-      icon:'fas fa-newspaper ',
+      icon:'fa-solid fa-fire ', 
       title:'टॉप न्यूज',
        
     
     },
     {
-      icon:'fas fa-newspaper ',
+      icon:'fa-regular fa-pen-to-square ',  
       title:' इंवेस्टिगेशन',
        
     },
@@ -73,15 +73,27 @@ export class HeaderComponent implements OnInit {
        
      
     },
-    // {
-    //   icon:'fas fa-newspaper pe-2',
-    //   title:'खबरदार',
+    {
+      icon:'fas fa-newspaper ',
+      title:'खबरदार',
        
       
-    // }, 
+    }, 
+    {
+      icon:'fas fa-newspaper ',
+      title:'खबरदार',
+       
+      
+    }, 
+    {
+      icon:'fa-solid fa-hashtag',
+      title:'टॉपिक',
+       
+      
+    }, 
 
 
-   ]
+   ] 
 
   constructor() { }
 

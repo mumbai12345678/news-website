@@ -1,4 +1,4 @@
-<header class="top-nav"   >
+<header class="top-nav"  style="z-index: 1000 !important;"  >
    
       
        <div class="top-nav1">
@@ -9,29 +9,31 @@
            <!-- ==================toggler start============== -->
   
            
-          <div class="res-sidenav bg-light">
+          <div class="res-sidenav  ">
           <!-- Hamburger Icon -->
    
-  <i class="fa-solid fa-bars-staggered  text-dark fs-5  pe-3 " (click)="openNav()" ></i>
+  <i class="fa-solid fa-bars text-dark fs-5  pe-3" (click)="openNav()" ></i>
   <!-- Side Navbar -->
   <div id="mySidenav" class="sidenav  " [ngClass]="{ 'open': isOpen }"  style="background-color: rgb(255, 255, 255);  ">
     <!-- Close Button (White Color) -->
      
-    <div class="aside-header"    >
-      <img class="brand-logo-sm"
-      src="../assets/images/2_prev_ui.png"
-      alt="Brand Logo"
-      style="max-width: auto; height: 32px  "
-    />
-    <!-- <button class="close-btn" (click)="closeNav()">&#10005;</button> -->
+    <div class="aside-header pb-3"    >
+      
+        <div   class="px-3 py-2 responsive-nav"> <img class="brand-logo-sm"
+          src="../assets/images/2_prev_ui.png"
+          alt="Brand Logo"
+          style="max-width: auto; height: 38px  "
+        />
+        <button class="close-btn" (click)="closeNav()">&#10005;</button></div>
+      
     <div>
       <div    >
-        <input  class="search-container  res-search "  
+        <input style="width: 90%!important;"  class="search-container  res-search   search-box"  
           type="text"
-          class="search-box"
+         
           placeholder="यहां खोज करें..."
-        />
-        <i class="fas fa-search search-icon"></i>
+         />
+        <i class="fas fa-search search-icon"  ></i>
       </div>
     </div>
   
@@ -40,10 +42,9 @@
     
     <!-- Navbar Links -->
     
-    <a routerLink="/">Home</a>
-    <a routerLink="/about">About</a>
-    <a routerLink="/services">Services</a>
-    <a routerLink="/contact">Contact</a>
+     <div *ngFor="let item of res_nav" class="d-flex res-navbar" style="padding-left: 16px;border-bottom: 1px solid rgb(229 231 235);"> <i [class]="item.icon" style="font-size: 16px;color: rgb(51 65 85);padding: 10px 5px;"></i>
+      <a href="" style="color: rgb(51 65 85);font-weight: 700;  ;font-size: 18px;"  >{{item.title}}</a>
+     </div>
   </div>
   
           </div>
@@ -61,7 +62,7 @@
             <img class="brand-logo-sm"
               src="../assets/images/2.webp"
               alt="Brand Logo"
-              style="max-width: auto; height: 32px  "
+              style="max-width: auto; height: 24px  "
             />
             
           </div>
@@ -83,7 +84,7 @@
            
           </div>
             
-          <div class="  responsive-icon   d-md-none d-block      " id="res-search" style="display: flex; align-items: center; justify-content: center;width: 22px; font-size: 18px;color: rgb(39, 39, 39);"><i  class="fas fa-search       " (click)="searchToggler()"></i>
+          <div class="  responsive-icon   d-lg-none d-block      " id="res-search" style="display: flex; align-items: center; justify-content: center;width: 22px; font-size: 18px;color: rgb(39, 39, 39);"><i  class="fas fa-search       " (click)="searchToggler()" style="padding-top:12px;"></i>
             <!-- mob view -->
              </div>
 <!-- <div class="d-none d-md-block">
@@ -93,7 +94,7 @@ web show
        </div>
       
   
-      <div  class="links" > 
+      <div  class="links"   > 
         <a href="" *ngFor="let item of res_nav"> <i [ngClass]="item.icon"></i>
           {{item.title}}
         </a> 
