@@ -97,6 +97,7 @@ export class HeaderComponent implements OnInit {
    ] 
 
   constructor(private commonservice: CommonService) { }
+  headerData:any;
 
   ngOnInit(): void {
   this.getData()
@@ -104,7 +105,7 @@ export class HeaderComponent implements OnInit {
 
   getData(){
     this.commonservice.getData('','').subscribe((res)=>{
-      console.log(res);
+      this.headerData=res
     })
   }
 //   @HostListener('window:scroll', [])
