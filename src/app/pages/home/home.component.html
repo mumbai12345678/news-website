@@ -5,7 +5,8 @@
   <div class="col-12">
 
     
-     
+  
+    
  
 
    
@@ -30,17 +31,24 @@
          <!-- Content for the left half -->
           <!-- ================new============= -->
  <div class="headline "  >  
-    <img  class="headline-img"  [src]="newsSection.headlineImgUrl" alt=""  width="100%" height="auto">
+    <img  class="headline-img"  [src]="newsSection.headlineImgUrl" alt=""  width="100% " height="auto ">
     <div class="headline-container">
       <a href="" class="link"> <h3 class="headline-content" style="text-align: justify;">{{newsSection.headlineContent}}</h3></a>
       <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p>
     </div>
     <!-- ===============subnews========== -->
   
-    <div class="row sub-heading  " >
+    <!-- <div class="row sub-heading  " >
       <div class="col-4  "> <img class="sub-img"  [src]="newsSection.subNewsImgUrl" alt="" width="100%" height="auto"> </div>
       <div class="col-8  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;">{{newsSection.subNewsContent}}</h3>
         <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p></div>
+      </div>
+    </div> -->
+    <div class="d-flex" >
+      <div><img class="sub-img  "  [src]="newsSection.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
+      <div class="sub-heading">
+       <h3 class="sub-con  "  >{{newsSection.subNewsContent}}  </h3>
+       <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p>
       </div>
     </div>
     
@@ -49,14 +57,23 @@
  
 
        </div>
-       <div class="col-lg-6  col col-s-12 col ">
-        <div class="row sub-heading  align-items-center " *ngFor="let subnews of relatedNews" >
+       <div class="col-lg-6  col col-s-12 col "  >
+        <!-- <div class="row sub-heading  align-items-center " *ngFor="let subnews of relatedNews" >
           <div class="col-lg-4 col  "  > <img class="sub-img  "  [src]="subnews.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
           <div class="col-lg-8 col  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;font-size: 16px;font-weight: 700;  ">{{subnews.subNewsContent}}  </h3>
             <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ subnews.autherName  }}</a></p></div>
           </div>
-        </div>
+        </div> -->
 
+<div class="d-flex" *ngFor="let subnews of relatedNews">
+  <div><img class="sub-img  "  [src]="subnews.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
+  <div class="sub-heading">
+   <h3 class="sub-con  "  >{{subnews.subNewsContent}}  </h3>
+   <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ subnews.autherName  }}</a></p>
+  </div>
+</div>
+
+        
         <!-- Content for the right half -->
       </div>
     </div>
@@ -71,11 +88,11 @@
        </div></div>
 
        <!-- ===car== -->
-       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+       <div id="carouselExampleControl" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="row justify-content-evenly"  >
-              <div class="col-3"  *ngFor=" let story of visualStories"> 
+              <div class="col-3  "  *ngFor=" let story of visualStories"> 
                 <div class="card" style="box-shadow: 0 4px 6px -2px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);">
                 <img [src]="story.imgUrl" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -93,7 +110,7 @@
           </div>
           <div class="carousel-item">
             <div class="row justify-content-evenly"  >
-              <div class="col-3"  *ngFor=" let story of visualStories"> 
+              <div class="  col-3"  *ngFor=" let story of visualStories"> 
                 <div class="card" style="box-shadow: 0 4px 6px -2px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);">
                 <img [src]="story.imgUrl" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -111,7 +128,7 @@
           </div>
           <div class="carousel-item">
             <div class="row justify-content-evenly"  >
-              <div class="col-3"  *ngFor=" let story of visualStories"> 
+              <div class="  col-3   "  *ngFor=" let story of visualStories"> 
                 <div class="card" style="box-shadow: 0 4px 6px -2px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);">
                 <img [src]="story.imgUrl" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -128,11 +145,11 @@
             </div>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#carouselExampleControl" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
          
         </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carouselExampleControl" role="button" data-slide="next">
           <span class="carousel-control-next-icon " aria-hidden="true"></span>
            
         </a>
@@ -150,10 +167,51 @@
 <!-- =============updated VSs================== -->
  
 
+<div class="row my-4">
+  <div class="col-12">
+    <div class="d-flex justify-content-between ;align-items-center"><h3 class="news-title"> <a href="" class="title-link">विजुअल स्टोरीज़</a></h3>  <div   style="color: grey;align-items: center;">
+      <span class="view-more p-1" >और देखें</span> <span class="view-more  "><i class="fa-solid fa-chevron-right vm"></i></span>
+
+   </div></div>
+
+   <!-- ===car== -->
+   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item  " *ngFor="let story of visualStories ;let i = index"      [class.active]="i === 0">
+        <div class="row justify-content-evenly"  >
+          <div class="col-lg-3 col-6  "  *ngFor="let story of visualStories ;let i = index"   > 
+            <div class="card" style="box-shadow: 0 4px 6px -2px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);">
+            <img [src]="story.imgUrl" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title  cardTitle"> {{story.cardTitle}}</h5>
+              <p class="card-text py-2 cardContent    "> {{
+                story.cardText}}</p>
+              
+            </div>
+          </div></div>
+
+           
+        
+        
+        </div>
+      </div>
+      
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon " aria-hidden="true"></span>
+       
+    </a>
+  </div>
+
+  </div>
+</div>
 
 
-
-
+<!-- =============ude======= -->
 
     
 
@@ -620,3 +678,7 @@
     </div>
   </div>
 </div>
+
+
+<!-- ================================ -->
+ 

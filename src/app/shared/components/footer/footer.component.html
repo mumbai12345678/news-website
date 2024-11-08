@@ -124,44 +124,44 @@
   <footer class="bg-warnign row        ">
     <div class="col-12 footer pt-4 px-3   ">
       <h5
-      class="ps-3 fw-bold text-opacity-100  "
-      style="color: rgb(115 119 126)"
+      class="ps-3   text-opacity-100  latest-article "
+       
     >
       लेटेस्ट आर्टिकल्स
     </h5>
-    <div class="row  footer-content ">
+    <div class="row     ">
      <div class="col-lg-6 col-12">
-      <ul>
+      <ul class="padding-left ">
         <ng-container
           *ngFor="let item of latestNews; let i = index"
         >
-          <li *ngIf="i < 2" class="news-content py-2">
+          <li *ngIf="i < 2" class="news-content    ">
             <a>{{ item.heading }}</a>
           </li>
         </ng-container>
       </ul>
      </div>
-     <div class="col-lg-6 col-12">
-      <ul>
+     <div class="col-lg-6 col-12  ">
+      <ul  class=" " >
         <ng-container
           *ngFor="let item of latestNews; let i = index"
         >
-          <li *ngIf="i > 1" class="news-content py-2">
+          <li *ngIf="i > 1" class="news-content   ">
             <a>{{ item.heading }}</a>
           </li>
         </ng-container>
       </ul>
      </div>
     </div>
-    <div class="d-flex mt-3">
+    <div class="d-flex   footer-content">
       <div class="  d-flex  ">
         <div class="barcode">
           <img 
           src="../assets/images/barcode.png"
           alt=""
-          max-width="130px"
+           width="130px"
           height="130px"
-          class="res-img"
+           
            
         />
         <div class="d-flex justify-content-between mt-2 d-lg-none" > <div class="footer-icon">

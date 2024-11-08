@@ -6,6 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+// Component TypeScript file
+ 
+
+
+
+
+
+
+
+
+
+
+
+  // ======================
  
   newsTitle="बड़ी खबरें"
   autherName=" Parivesh Gupta";
@@ -23,7 +38,7 @@ export class HomeComponent implements OnInit {
       headlineContent: "NIA का रिश्वतखोर डीएसपी, 20 लाख कैश लेते CBI ने पकड़ा, NIA का DSP बोला- AK-47 रखवाकर अरेस्ट करवा दूंगा",
       subNewsImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/66fe4a3ac2436-an-12-transport-plane-crash-thomas-cherian-033937552-16x9.jpg?size=280:180",
       subNewsVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/video/202407/66a0c21093b79-crime-news-245751616-16x9.png?size=280:180",
-      subNewsContent: "56 सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!",
+      subNewsContent: "  56 सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!",
       autherName:" Parivesh Gupta",
      
       
@@ -42,11 +57,11 @@ export class HomeComponent implements OnInit {
   relatedNews:any[]=[
     {subNewsImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/66fe4a3ac2436-an-12-transport-plane-crash-thomas-cherian-033937552-16x9.jpg?size=280:180",
       subNewsVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/video/202407/66a0c21093b79-crime-news-245751616-16x9.png?size=280:180",
-      subNewsContent: "56 सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!",
+      subNewsContent: "  सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी कासालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी कासालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!",
       autherName:" Parivesh Gupta"},
       {subNewsImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/66fe4a3ac2436-an-12-transport-plane-crash-thomas-cherian-033937552-16x9.jpg?size=280:180",
         subNewsVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/video/202407/66a0c21093b79-crime-news-245751616-16x9.png?size=280:180",
-        subNewsContent: "56 सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!",
+        subNewsContent: " 56 सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!56 सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!",
         autherName:" Parivesh Gupta"},
         {subNewsImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/66fe4a3ac2436-an-12-transport-plane-crash-thomas-cherian-033937552-16x9.jpg?size=280:180",
           subNewsVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/video/202407/66a0c21093b79-crime-news-245751616-16x9.png?size=280:180",
@@ -79,6 +94,10 @@ export class HomeComponent implements OnInit {
     cardText:"Coldplay कॉन्सर्ट की टिकट को लेकर India में धांधली?"
   }
 ]
+
+
+// ====================
+
 
   constructor() { }
 

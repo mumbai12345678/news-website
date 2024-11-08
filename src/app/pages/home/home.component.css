@@ -1,6 +1,5 @@
 
 
-
  
   
 
@@ -65,11 +64,11 @@
 .auther-name{
     text-decoration: none;
     color:brown;
-    font-size: 15px;
+    font-size: 14px;
      
 }
 .date{
-    font-size: 13px;
+    font-size: 14px;
     color:rgb(107 114 128);
     font-weight: 500;
 }
@@ -78,22 +77,31 @@
     --bs-gutter-y:0rem
 }
 /* ====================headline============ */
+.headline-img{
+    border-radius: .375rem;
+    /* width: 406.56px;
+    height: 228.69px; */
+
+}
+
+.headline-content{
+        
+    font-size:  18px;
+line-height: 1.75rem;
+font-weight: 800;
+display: -webkit-box; /* Ensures the container behaves like a box */
+  -webkit-box-orient: vertical; /* Makes the text flow vertically */
+  -webkit-line-clamp: 3; /* Limits the text to 3 lines */
+  overflow: hidden;
+}
 .headline-container{
     /* height: 96px; */
 }
 .headline{
     /* width: 406.56px; */
-    .headline-img{
-        border-radius: .375rem;
-
-    }
+    
    
-    .headline-content{
-        
-            font-size:  17px;
-    line-height: 1.75rem;
-    font-weight: 800;
-    }
+    
     
     
 }
@@ -110,18 +118,27 @@
 
    }
    .sub-img{
-    /* width: 140px; */
-    /* height: 98px; */
+  width: 140px; 
+     height: 90px; 
     border-radius: 5px;
+    margin: 2px 0px 0px;
 }
 .sub-con{
 /* width: 266px; */
-font-size: 1rem;
+text-align: justify;
+font-size: 16px;
 font-weight: 700;
+color: black;
+line-height: 1.5;
+display: -webkit-box; /* Ensures the container behaves like a box */
+  -webkit-box-orient: vertical; /* Makes the text flow vertically */
+  -webkit-line-clamp: 3; /* Limits the text to 3 lines */
+  overflow: hidden;
+ 
  
 }
     .sub-heading
-{
+{  padding: 0px 0px 0px 8px;
     /* height: 98px; */
     .sub-img{
         /* width: 140px; */
@@ -159,6 +176,10 @@ font-weight: 700;
 @media (min-width:320px) and (max-width:768px) {
     .res-ad{
         display: none;
+    }
+    .sub-img{
+        width: 140px !important;
+        height: 80px !important;
     }
     
 }
