@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { CommonService } from '../../service/common.service';
 
 @Component({
   selector: 'app-header',
@@ -95,9 +96,16 @@ export class HeaderComponent implements OnInit {
 
    ] 
 
-  constructor() { }
+  constructor(private commonservice: CommonService) { }
 
   ngOnInit(): void {
+  this.getData()
+  }
+
+  getData(){
+    this.commonservice.getData('','').subscribe((res)=>{
+      console.log(res);
+    })
   }
 //   @HostListener('window:scroll', [])
 // onWindowScroll(event: Event) {

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { BaseLayoutComponent } from './components/base-layout/base-layout.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -27,7 +28,8 @@ import { TopButtonComponent } from '../pages/top-button/top-button.component';
   imports: [
     CommonModule,
     MatChipsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
     
   ],
   exports: [
@@ -35,7 +37,8 @@ import { TopButtonComponent } from '../pages/top-button/top-button.component';
     HeaderComponent,
     TopNavComponent,
     LeftNavbarComponent,
-    RightNavbarComponent
+    RightNavbarComponent,
+    HttpClientModule
      
    
   ]
