@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../../service/common.service';
 
 @Component({
   selector: 'app-left-navbar',
@@ -7,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftNavbarComponent implements OnInit {
   selectedIndex:any= -1;
+   leftNavData:any;
 
-  constructor() { }
+  constructor( private service:CommonService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+this.service.getLeftNavData().subscribe(res=>{
+this.leftNavData=res;
+console.log( "hey",this.leftNavData)
+})
+  }
   
 
   headers = [

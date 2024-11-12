@@ -1,3 +1,78 @@
+.title-content {
+  font-size: 16px;
+  color: black;
+
+  /* Combined properties */
+  font-weight: 700; /* From .font-bold */
+  text-align: left; /* From .text-left */
+  flex: 1 1 0%; /* From .flex-1 */
+  overflow: hidden; /* From .line-clamp-3, .line-clamp-5 */
+  display: -webkit-box; /* From .line-clamp-3, .line-clamp-5 */
+  -webkit-box-orient: vertical; /* From .line-clamp-3, .line-clamp-5 */
+  -webkit-line-clamp: 3; /* For 3 lines of text clamping */
+  margin-top: 0.25rem; /* From .mt-1 */
+  margin-bottom: 0.5rem; /* From .my-2 */
+}
+.title-content:hover{
+  color:rgb(183 31 51) ;
+}
+ .title-img{
+ 
+    /* Properties */
+    -o-object-fit: fill; /* For older Opera browser support */
+    object-fit: fill; /* Ensures the image fits within its container */
+    border-radius: 0.375rem; /* From .rounded-md */
+   
+    height: 177px; /* Auto height from .h-auto */
+    max-width:314px; /* Ensures the image does not exceed container width */
+    display: block; /* Block display */
+    vertical-align: middle; /* Aligns the element in the middle */
+  }
+  
+ 
+/* ======================sub-content============ */
+.sub-img {
+  /* Properties */
+  height: 4rem; /* From .h-16 */
+  -o-object-fit: fill; /* For older Opera browser support */
+  object-fit: fill; /* Ensures the image fits within its container */
+  border-radius: 0.375rem; /* From .rounded-md */
+  min-width: 114px; /* From .min-w-[114px] */
+  max-width: 100%; /* Ensures the image does not exceed container width */
+  display: block; /* Block display */
+  vertical-align: middle; /* Aligns the element in the middle */
+  cursor: pointer; /* From [role=button], button */
+}
+
+ 
+  .sub-content {
+    /* Combined properties */
+    font-weight: 700; /* From .font-bold */
+    flex: 1 1 0%; /* From .flex-1 */
+    overflow: hidden; /* From .line-clamp-3, .line-clamp-5 */
+    display: -webkit-box; /* For line clamping */
+    -webkit-box-orient: vertical; /* Set the box orientation */
+    -webkit-line-clamp: 3; /* Clamps text to 3 lines */
+    margin-left: 0.5rem; /* From .mx-2 */
+    margin-right: 0.5rem; /* From .mx-2 */
+    font-size: 16px;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  a:hover{
+     color:rgb(183 31 51)  ;
+  }
+  .sub-suggestion{
+    margin: 8px 0px;
+  }
+  
+ 
+
+
+
+/* =========================update rightbar========= */
 .right-nav {
  
   max-height: fit-content;
@@ -15,13 +90,36 @@
 
 
 
+/* ====================chips============== */
 
-
-  .mat-chip.mat-standard-chip {
-    background-color: #fbfbfb;
-    color: rgba(0, 0, 0, .87);
-    border: 1px solid gray;
+  .chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Space between chips */
   }
+  
+  .chip {
+    display: inline-block;
+    padding: .25rem 1rem;
+    border-radius: 8px; /* Rounded edges */
+    background-color: #fff; /* Light gray background */
+    color: rgb(101, 112, 128);
+    font-weight: 500 !important; /* Text color */
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    user-select: none; /* Prevent text selection */
+    border: 1px solid #e5e7eb ; 
+  }
+  
+  .chip:hover {
+    background-color: #f7f7f7; /* Darker shade on hover */
+  }
+  
+  .chip:active {
+    background-color: #c0c0c0; /* Even darker shade when active */
+  }
+  /* ==================================== */
 
   /* .bar{
     height: 100%;
@@ -32,13 +130,7 @@
 
 }
 
-.example-box.cdk-drag-animating {
-  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-}
-
-.example-chip .cdk-drop-list-dragging {
-  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-}
+ 
 
 .suggetion-heading {
   text-decoration: none;
@@ -48,7 +140,7 @@
   padding-bottom: 10px;
 
 
-  a {
+ a {
     text-decoration: none;
     color: rgb(183 31 51);
     font-weight: 700;
@@ -72,36 +164,12 @@
      
 
   }
+  /* ========================= */
 
-  .ad-container-img {
-    overflow: hidden;
-    text-align: center;
-    /* border: 1px solid rgb(159 145 145); */
-    height: 10.125rem;
-    width: inherit;
-    background-color: white;
-    border-radius: 5px;
-
-  }
+  
 
 }
-.right-top-advertisement-news-card {
-  height: auto;
-  /* background-color: rgb(243 244 246); */
-  font-size: 12px;
-  color: #747474;
-
-  .ad-container {
-    overflow: hidden;
-    text-align: center;
-    border: 1px solid rgb(159 145 145);
-    height: 16.125rem;
-    width: inherit;
-    background-color: white;
-
-  }
-
-}
+ 
 
 .top {
   position: fixed;
@@ -116,66 +184,8 @@
 }
 
 /********************************************************* */
-.article-container {
-  display: flex;
-  align-items: flex-start;
-  /* border-bottom: 1px solid #ddd; */
-  padding-bottom: 10px;
-  margin-bottom: 15px;
-}
-
-.article-image img {
-  width: 103px;
-  height: 80px;
-  /* object-fit: cover; */
-  border-radius: 5px;
-}
-
-.article-content {
-  padding-left: 15px;
-  flex-grow: 1;
-}
-
-.article-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  color: #333;
-}
-.article-title:hover {
- color: #d9534f;
-}
-.article-head-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  color: #333;
-}
-.article-head-title:hover {
-  color: #d9534f;
  
-}
-
-.article-meta {
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-  color: #777;
-  margin-top: 5px;
-}
-
-.article-date::before {
-  content: '📅 ';
-}
-
-.article-author {
-  margin-left: 10px;
-  color: #d9534f;
-}
-
-.article-author::before {
-  content: '✍ ';
-}
+ 
 .view-more{
   cursor: pointer;
   font-weight: 300;
@@ -197,7 +207,4 @@
 
   
 }
-.img-size{
-  height: 100%;
-  width: 100%;
-}
+ 

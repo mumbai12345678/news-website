@@ -9,13 +9,7 @@ export class HomeComponent implements OnInit {
 
 // Component TypeScript file
  
-
-
-
-
-
-
-
+ 
 
 
 

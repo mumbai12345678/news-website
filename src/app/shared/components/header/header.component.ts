@@ -7,6 +7,7 @@ import { CommonService } from '../../service/common.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  baseUrl = 'https://dangalnews.revanshrenewable.com/API';
   isvisible:boolean=false;
     resSearchToggler:boolean=true;
     Icon:boolean=true;
@@ -106,6 +107,7 @@ export class HeaderComponent implements OnInit {
   getData(){
     this.commonservice.getData('','').subscribe((res)=>{
       this.headerData=res
+      console.log(this.headerData)
     })
   }
 //   @HostListener('window:scroll', [])

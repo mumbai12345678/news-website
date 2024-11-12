@@ -12,5 +12,6 @@ export class RightSidebarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
 }

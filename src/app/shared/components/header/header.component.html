@@ -66,12 +66,15 @@
             />
             
           </div>
+ 
           <div
         class="menu-item   ps-4"
-        *ngFor="let items of header; let i = index"
+        *ngFor="let items of headerData.categories; let i = index"
         [class.first-item]="i === 0"
     >
-        <i [ngClass]="items.icon"></i> {{ items.title }}
+        <!-- <i [ngClass]="items.icon"></i>  -->
+         <img class="header-icons" [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/'+items.image" alt="" width="24px" height="24px">
+         <a href="" class="header-link">{{items.category}}</a>
     </div>
         </div>
         <div class="nav-right "  >

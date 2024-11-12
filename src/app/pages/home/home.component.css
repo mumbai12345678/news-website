@@ -1,9 +1,6 @@
 
 
- 
   
-
-
 
 /* custom carousel */
 
@@ -79,6 +76,7 @@
 /* ====================headline============ */
 .headline-img{
     border-radius: .375rem;
+    position: relative;
     /* width: 406.56px;
     height: 228.69px; */
 

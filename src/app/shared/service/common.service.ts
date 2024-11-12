@@ -21,5 +21,8 @@ export class CommonService {
     let url = `/fetch_category.php`;
     return this.http.get(this.baseUrl + url)
   }
-
+  getLeftNavData( ) : Observable<any> {
+    let url = `/fetch_sidebar_category.php`;
+    return this.http.get(this.baseUrl + url)
+  }
 }

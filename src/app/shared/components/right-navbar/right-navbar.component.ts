@@ -10,6 +10,7 @@ export interface Topic {
  
 export class RightNavbarComponent implements OnInit {
   
+  
   topics:  Topic[] = [
     {name: 'न्यायालय समाचार'},
     {name: 'क्राइम-कोर्ट न्यूज़'},
@@ -136,7 +137,38 @@ export class RightNavbarComponent implements OnInit {
     
    
   ];
-  
+  news: any[] = [
+    { 
+      type: "news",
+      newsTitle: "बड़ी खबरें",
+      headlineImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202411/6731fffccef62-russia-ukraine-war-110039621-16x9.jpg?size=360:203",
+      headlineVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/video/202410/66fe5071cca1e-punjab-viral-video-030608830-16x9.jpg?size=360:203",
+      headlineContent: "  होने वाला है तीसरा विश्व युद्ध? रूस की राजधानी पर हमले से हुई शुरूआत",
+      subNewsImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/66fe4a3ac2436-an-12-transport-plane-crash-thomas-cherian-033937552-16x9.jpg?size=280:180",
+      subNewsVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/video/202407/66a0c21093b79-crime-news-245751616-16x9.png?size=280:180",
+      subNewsContent: "  56 सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!",
+      autherName:" Parivesh Gupta",
+     
+      
+    }, ];
+    relatedNews:any[]=[
+      {subNewsImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/66fe4a3ac2436-an-12-transport-plane-crash-thomas-cherian-033937552-16x9.jpg?size=280:180",
+        subNewsVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/video/202407/66a0c21093b79-crime-news-245751616-16x9.png?size=280:180",
+        subNewsContent: "  मुंबई में कत्ल, नेपाल बॉर्डर पर कातिल... बाबा सिद्दीकी पर गोली चलाने वाले शिव का कुबूलनामा हैरान कर देगा",
+        autherName:" Parivesh Gupta"},
+        {subNewsImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202411/67302b8762fc5-bengaluru-video-woman-was-making-a-vlog-while-walking-on-the-road--then-a-10-year-old-boy-came-and-104153684-16x9.jpg?size=948:533",
+          subNewsVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202411/672c8d5fb88bc-donald-trump-075017805-16x9.jpg?size=948:533",
+          subNewsContent: " Donald Trump पर हुई फायरिंग ने पलट दिया पूरा चुनाव,जानिए वो 3 फैक्टर जिससे ट्रंप ने जीता US Election",
+          autherName:" Parivesh Gupta"},
+          {subNewsImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202411/672c8d5fb88bc-donald-trump-075017805-16x9.jpg?size=948:533",
+            subNewsVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/video/202407/66a0c21093b79-crime-news-245751616-16x9.png?size=280:180",
+            subNewsContent: "56 सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!",
+            autherName:" Parivesh Gupta"},
+            {subNewsImgUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/story/202410/66fe4a3ac2436-an-12-transport-plane-crash-thomas-cherian-033937552-16x9.jpg?size=280:180",
+              subNewsVideoUrl: "https://akm-img-a-in.tosshub.com/lingo/crtak/images/video/202407/66a0c21093b79-crime-news-245751616-16x9.png?size=280:180",
+              subNewsContent: "56 सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!",
+              autherName:" Parivesh Gupta"}
+    ] 
 
   constructor() { }
 
