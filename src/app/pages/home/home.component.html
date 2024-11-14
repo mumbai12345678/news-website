@@ -1,9 +1,39 @@
-<div class="row news" *ngFor="let newsSection of news">
+<div class="row news"  >
 
 
 
   <div class="col-12">
-
+<!-- =============customecar= -->
+    <!-- <p *ngFor="let s of item">{{ s}}</p> -->
+    
+    <!-- <div class="row">
+      <div class="slider-container">
+        <div class="slider" [style.transform]="getTransformStyle()">
+          <div class="slide" *ngFor="let slide of slides">
+            <a [href]="slide.link" target="_blank">
+              <div class="slide-content">
+                <img [src]="slide.image" alt="Slide Image" />
+                <div class="overlay">
+                  <h3>{{ slide.title }}</h3>
+                  <p>{{ slide.description }}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <button class="nav-button prev" (click)="prevSlide()">‹</button>
+        <button class="nav-button next" (click)="nextSlide()">›</button>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+    </div> -->
+    
     
     
   <!-- ======================== -->
@@ -24,60 +54,67 @@
 
      <!-- big news -->
         
-      
-     <div class="row  px-2   "  >
-      <h3 class="news-title my-4">{{newsSection.newsTitle}} </h3>
-       <div class="col-lg-6  col-12  ">
        
-         <!-- Content for the left half -->
-          <!-- ================new============= -->
- <div class="headline   "  >  
-    <img  class="headline-img"  [src]="newsSection.headlineImgUrl" alt=""  width="100% " height="auto ">
-    <div class="headline-container pt-3 ">
-      <a href="" class="link"> <h3 class="headline-content" style="text-align: justify;">{{newsSection.headlineContent}}</h3></a>
-      <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p>
-    </div>
-    <!-- ===============subnews========== -->
+     <div class="row px-2"  *ngFor="let item of mainContent.category_data['टॉप न्यूज'].slice(0,1)"   >
   
-    <!-- <div class="row sub-heading  " >
-      <div class="col-4  "> <img class="sub-img"  [src]="newsSection.subNewsImgUrl" alt="" width="100%" height="auto"> </div>
-      <div class="col-8  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;">{{newsSection.subNewsContent}}</h3>
-        <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p></div>
-      </div>
-    </div> -->
-    <div class="d-flex" >
-      <div><img class="sub-img  "  [src]="newsSection.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
-      <div class="sub-heading">
-       <h3 class="sub-con  "  >{{newsSection.subNewsContent}}  </h3>
-       <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p>
-      </div>
-    </div>
-    
-     
-  </div>  
- 
-
-       </div>
-       <div class="col-lg-6  col col-s-12 col "  >
-        <!-- <div class="row sub-heading  align-items-center " *ngFor="let subnews of relatedNews" >
-          <div class="col-lg-4 col  "  > <img class="sub-img  "  [src]="subnews.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
-          <div class="col-lg-8 col  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;font-size: 16px;font-weight: 700;  ">{{subnews.subNewsContent}}  </h3>
-            <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ subnews.autherName  }}</a></p></div>
+      <h3 class="news-title my-4"> {{item.category}}  </h3>
+           <div class="col-lg-6  col-12  "  >
+           
+             <!-- Content for the left half -->
+              <!-- ================new============= -->
+     <div   class="headline   "   *ngFor="let news of item.news_description.slice(0,1)"     >  
+        <img  class="headline-img"  [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' +news.image" alt=""  width="367.8px " height="203.88px">
+        <div class="headline-container pt-4 ">
+          <a href="" class="link"> <h3 class="headline-content" style="text-align: justify;">{{news.title}}</h3></a>
+          <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ item.author  }}</a></p>
+        </div>
+        <!-- ===============subnews========== -->
+      
+        <!-- <div class="row sub-heading  " >
+          <div class="col-4  "> <img class="sub-img"  [src]="newsSection.subNewsImgUrl" alt="" width="100%" height="auto"> </div>
+          <div class="col-8  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;">{{newsSection.subNewsContent}}</h3>
+            <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p></div>
           </div>
         </div> -->
-
-<div class="d-flex" *ngFor="let subnews of relatedNews">
-  <div><img class="sub-img  "  [src]="subnews.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
-  <div class="sub-heading">
-   <h3 class="sub-con  "  >{{subnews.subNewsContent}}  </h3>
-   <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ subnews.autherName  }}</a></p>
-  </div>
-</div>
-
+        <div *ngFor="let item of mainContent.category_data['टॉप न्यूज'].slice(1,2)" > 
+          <div class="d-flex"     *ngFor="let news of item.news_description.slice(0,1)"     >
+          <div><img class="sub-img  " [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' +news.image" alt=""   width="135px"    height="96px"  ></div>
+          <div class="sub-heading">
+           <h3 class="sub-con  "  >{{news.title}}  </h3>
+           <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ item.author  }}</a></p>
+          </div>
+        </div></div>
         
-        <!-- Content for the right half -->
+         
+      </div>  
+     
+    
+           </div>
+           <div class="col-lg-6  col col-s-12 col "      >
+            <!-- <div class="row sub-heading  align-items-center " *ngFor="let subnews of relatedNews" >
+              <div class="col-lg-4 col  "  > <img class="sub-img  "  [src]="subnews.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
+              <div class="col-lg-8 col  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;font-size: 16px;font-weight: 700;  ">{{subnews.subNewsContent}}  </h3>
+                <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ subnews.autherName  }}</a></p></div>
+              </div>
+            </div> -->
+    <ng-container  *ngFor="let item of mainContent.category_data['टॉप न्यूज'].slice(2,5)"> 
+    
+    <div class="d-flex  py-2"   *ngFor="let news of item.news_description.slice(0,1)" >
+      <div><img class="sub-img   "  [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' +item.image" alt=""   width="135px"    height="96px"  ></div>
+      <div class="sub-heading">
+       <h3 class="sub-con  "  >{{ news.title}}  </h3>
+       <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-  name"> {{ item.author  }}</a></p>
       </div>
     </div>
+    </ng-container>
+    
+            
+            <!-- Content for the right half -->
+          </div>
+      
+     
+           
+        </div>
 
     <!-- =============== -->
     <!-- =====================visual stories start=========== -->
@@ -222,7 +259,7 @@
     <div class="row" style="margin: 0px">
       <div class="col-12">
         <!-- Content for the full-width column -->
-        <h3 class="news-title">{{ newsSection.newsTitle }}</h3>
+        <!-- <h3 class="news-title">{{ newsSection.newsTitle }}</h3> -->
         <div class="row">
           <div class="col-lg-6 col-12">
             <!-- Content for the left half -->
@@ -230,12 +267,12 @@
             <div class="headline">
               <div class="news-video">
                 <a href="">
-                  <img
+                  <!-- <img
                     class="headline-img"
                     [src]="newsSection.headlineVideoUrl"
                     alt=""
                     width="100%"
-                    height="auto" />
+                    height="auto" /> -->
                   <div
                     class="rounded-circle"
                     style="
@@ -257,17 +294,17 @@
                 ></a>
               </div>
               <div class="headline-container">
-                <a href="" class="link">
+                <!-- <a href="" class="link">
                   <h3 class="headline-content" style="text-align: justify">
                     {{ newsSection.headlineContent }}
-                  </h3></a
+                  </h3></a -->
                 >
                 <p class="date">
                   <i class="fa-solid fa-calendar-days"></i>
                   <time datetime=""> {{ date | date : "dd-mm-yyyy" }}</time> by
-                  <a href="" class="auther-name">
+                  <!-- <a href="" class="auther-name">
                     {{ newsSection.autherName }}</a
-                  >
+                  > -->
                 </p>
               </div>
               <!-- ===============subnews========== -->
@@ -276,12 +313,12 @@
                 <div class="col-4">
                   <div class="news-video">
                     <a href="">
-                      <img
+                      <!-- <img
                         class="sub-img"
                         [src]="newsSection.subNewsVideoUrl"
                         alt=""
                         width="130px"
-                        height="95px" />
+                        height="95px" /> -->
                       <div
                         class="rounded-circle"
                         style="
@@ -307,16 +344,16 @@
                 </div>
                 <div class="col-8">
                   <div class="ps-1">
-                    <h3 class="sub-con" style="text-align: justify">
+                    <!-- <h3 class="sub-con" style="text-align: justify">
                       {{ newsSection.subNewsContent }}
-                    </h3>
+                    </h3> -->
                     <p class="date">
                       <i class="fa-solid fa-calendar-days"></i>
                       <time datetime=""> {{ date | date : "dd-mm-yyyy" }}</time>
                       by
-                      <a href="" class="auther-name">
+                      <!-- <a href="" class="auther-name">
                         {{ newsSection.autherName }}</a
-                      >
+                      > -->
                     </p>
                   </div>
                 </div>
@@ -331,12 +368,12 @@
               <div class="col-4">
                 <div class="news-video">
                   <a href="">
-                    <img
+                    <!-- <img
                       class="sub-img"
                       [src]="newsSection.subNewsVideoUrl"
                       alt=""
                       width="130px"
-                      height="95px" />
+                      height="95px" /> -->
                     <div
                       class="rounded-circle"
                       style="
@@ -384,6 +421,7 @@
       </div>
     </div>
 
+
     <!-- ==============2nd add============== -->
     <div class="row my-3">
       <div class="col-12">
@@ -396,116 +434,67 @@
       </div>
     </div>
     <!-- ======================== polytics============= -->
-    <div class="row  px-2   "  >
-      <h3 class="news-title my-4">{{newsSection.newsTitle}} </h3>
-       <div class="col-lg-6  col-12  ">
-       
-         <!-- Content for the left half -->
-          <!-- ================new============= -->
- <div class="headline   "  >  
-    <img  class="headline-img"  [src]="newsSection.headlineImgUrl" alt=""  width="100% " height="auto ">
-    <div class="headline-container pt-3 ">
-      <a href="" class="link"> <h3 class="headline-content" style="text-align: justify;">{{newsSection.headlineContent}}</h3></a>
-      <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p>
-    </div>
-    <!-- ===============subnews========== -->
+    <div class="row px-2"  *ngFor="let item of mainContent.category_data['पॉलिटिक्स'].slice(0,1)"   >
   
-    <!-- <div class="row sub-heading  " >
-      <div class="col-4  "> <img class="sub-img"  [src]="newsSection.subNewsImgUrl" alt="" width="100%" height="auto"> </div>
-      <div class="col-8  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;">{{newsSection.subNewsContent}}</h3>
-        <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p></div>
-      </div>
-    </div> -->
-    <div class="d-flex" >
-      <div><img class="sub-img  "  [src]="newsSection.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
-      <div class="sub-heading">
-       <h3 class="sub-con  "  >{{newsSection.subNewsContent}}  </h3>
-       <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p>
-      </div>
-    </div>
-    
-     
-  </div>  
- 
-
-       </div>
-       <div class="col-lg-6  col col-s-12 col "  >
-        <!-- <div class="row sub-heading  align-items-center " *ngFor="let subnews of relatedNews" >
-          <div class="col-lg-4 col  "  > <img class="sub-img  "  [src]="subnews.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
-          <div class="col-lg-8 col  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;font-size: 16px;font-weight: 700;  ">{{subnews.subNewsContent}}  </h3>
-            <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ subnews.autherName  }}</a></p></div>
+      <h3 class="news-title my-4"> {{item.category}}  </h3>
+           <div class="col-lg-6  col-12  "  >
+           
+             <!-- Content for the left half -->
+              <!-- ================new============= -->
+     <div   class="headline   "   *ngFor="let news of item.news_description.slice(0,1)"     >  
+        <img  class="headline-img"  [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' +news.image" alt=""  width="367.8px " height="203.88px">
+        <div class="headline-container pt-4 ">
+          <a href="" class="link"> <h3 class="headline-content" style="text-align: justify;">{{news.title}}</h3></a>
+          <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ item.author  }}</a></p>
+        </div>
+        <!-- ===============subnews========== -->
+      
+        <!-- <div class="row sub-heading  " >
+          <div class="col-4  "> <img class="sub-img"  [src]="newsSection.subNewsImgUrl" alt="" width="100%" height="auto"> </div>
+          <div class="col-8  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;">{{newsSection.subNewsContent}}</h3>
+            <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p></div>
           </div>
         </div> -->
-
-<div class="d-flex" *ngFor="let subnews of relatedNews">
-  <div><img class="sub-img  "  [src]="subnews.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
-  <div class="sub-heading">
-   <h3 class="sub-con  "  >{{subnews.subNewsContent}}  </h3>
-   <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ subnews.autherName  }}</a></p>
-  </div>
-</div>
-
-        
-        <!-- Content for the right half -->
-      </div>
-    </div>
-
-    <!-- =======================investigation=============== -->
-    <div class="row  px-2   "  >
-      <h3 class="news-title my-4">{{newsSection.newsTitle}} </h3>
-       <div class="col-lg-6  col-12  ">
-       
-         <!-- Content for the left half -->
-          <!-- ================new============= -->
- <div class="headline   "  >  
-    <img  class="headline-img"  [src]="newsSection.headlineImgUrl" alt=""  width="100% " height="auto ">
-    <div class="headline-container pt-3 ">
-      <a href="" class="link"> <h3 class="headline-content" style="text-align: justify;">{{newsSection.headlineContent}}</h3></a>
-      <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p>
-    </div>
-    <!-- ===============subnews========== -->
-  
-    <!-- <div class="row sub-heading  " >
-      <div class="col-4  "> <img class="sub-img"  [src]="newsSection.subNewsImgUrl" alt="" width="100%" height="auto"> </div>
-      <div class="col-8  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;">{{newsSection.subNewsContent}}</h3>
-        <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p></div>
-      </div>
-    </div> -->
-    <div class="d-flex" >
-      <div><img class="sub-img  "  [src]="newsSection.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
-      <div class="sub-heading">
-       <h3 class="sub-con  "  >{{newsSection.subNewsContent}}  </h3>
-       <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p>
-      </div>
-    </div>
-    
-     
-  </div>  
- 
-
-       </div>
-       <div class="col-lg-6  col col-s-12 col "  >
-        <!-- <div class="row sub-heading  align-items-center " *ngFor="let subnews of relatedNews" >
-          <div class="col-lg-4 col  "  > <img class="sub-img  "  [src]="subnews.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
-          <div class="col-lg-8 col  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;font-size: 16px;font-weight: 700;  ">{{subnews.subNewsContent}}  </h3>
-            <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ subnews.autherName  }}</a></p></div>
+        <div *ngFor="let item of mainContent.category_data['पॉलिटिक्स'].slice(1,2)" > 
+          <div class="d-flex"     *ngFor="let news of item.news_description.slice(0,1)"     >
+          <div><img class="sub-img  " [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' +news.image" alt=""   width="135px"    height="96px"  ></div>
+          <div class="sub-heading">
+           <h3 class="sub-con  "  >{{news.title}}  </h3>
+           <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ item.author  }}</a></p>
           </div>
-        </div> -->
-
-<div class="d-flex" *ngFor="let subnews of relatedNews">
-  <div><img class="sub-img  "  [src]="subnews.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
-  <div class="sub-heading">
-   <h3 class="sub-con  "  >{{subnews.subNewsContent}}  </h3>
-   <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ subnews.autherName  }}</a></p>
-  </div>
-</div>
-
+        </div></div>
         
-        <!-- Content for the right half -->
+         
+      </div>  
+     
+    
+           </div>
+           <div class="col-lg-6  col col-s-12 col "      >
+            <!-- <div class="row sub-heading  align-items-center " *ngFor="let subnews of relatedNews" >
+              <div class="col-lg-4 col  "  > <img class="sub-img  "  [src]="subnews.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
+              <div class="col-lg-8 col  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;font-size: 16px;font-weight: 700;  ">{{subnews.subNewsContent}}  </h3>
+                <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ subnews.autherName  }}</a></p></div>
+              </div>
+            </div> -->
+    <ng-container  *ngFor="let item of mainContent.category_data['पॉलिटिक्स'].slice(1,5)"> 
+    
+    <div class="d-flex  py-2"   *ngFor="let news of item.news_description.slice(0,1)" >
+      <div><img class="sub-img   "  [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' +item.image" alt=""   width="135px"    height="96px"  ></div>
+      <div class="sub-heading">
+       <h3 class="sub-con  "  >{{ news.title}}  </h3>
+       <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-  name"> {{ item.author  }}</a></p>
       </div>
     </div>
-
-    <!-- ============================3rd add================= -->
+    </ng-container>
+    
+            
+            <!-- Content for the right half -->
+          </div>
+      
+     
+           
+        </div>
+          <!-- ============================3rd add================= -->
 
     <div class="row my-3">
       <div class="col-12">
@@ -517,62 +506,210 @@
         </div>
       </div>
     </div>
-    <!-- ===============================khabardar=========== -->
-    <div class="row  px-2   "  >
-      <h3 class="news-title my-4">{{newsSection.newsTitle}} </h3>
-       <div class="col-lg-6  col-12  ">
-       
-         <!-- Content for the left half -->
-          <!-- ================new============= -->
- <div class="headline   "  >  
-    <img  class="headline-img"  [src]="newsSection.headlineImgUrl" alt=""  width="100% " height="auto ">
-    <div class="headline-container pt-3 ">
-      <a href="" class="link"> <h3 class="headline-content" style="text-align: justify;">{{newsSection.headlineContent}}</h3></a>
-      <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p>
-    </div>
-    <!-- ===============subnews========== -->
-  
-    <!-- <div class="row sub-heading  " >
-      <div class="col-4  "> <img class="sub-img"  [src]="newsSection.subNewsImgUrl" alt="" width="100%" height="auto"> </div>
-      <div class="col-8  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;">{{newsSection.subNewsContent}}</h3>
-        <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p></div>
-      </div>
-    </div> -->
-    <div class="d-flex" >
-      <div><img class="sub-img  "  [src]="newsSection.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
-      <div class="sub-heading">
-       <h3 class="sub-con  "  >{{newsSection.subNewsContent}}  </h3>
-       <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p>
-      </div>
-    </div>
-    
-     
-  </div>  
- 
 
-       </div>
-       <div class="col-lg-6  col col-s-12 col "  >
-        <!-- <div class="row sub-heading  align-items-center " *ngFor="let subnews of relatedNews" >
-          <div class="col-lg-4 col  "  > <img class="sub-img  "  [src]="subnews.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
-          <div class="col-lg-8 col  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;font-size: 16px;font-weight: 700;  ">{{subnews.subNewsContent}}  </h3>
-            <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ subnews.autherName  }}</a></p></div>
+    <!-- ======================= courtnews=============== -->
+    <div class="row px-2"  *ngFor="let item of mainContent.category_data['पॉलिटिक्स'].slice(0,1)"   >
+  
+      <h3 class="news-title my-4"> {{item.category}}  </h3>
+           <div class="col-lg-6  col-12  "  >
+           
+             <!-- Content for the left half -->
+              <!-- ================new============= -->
+     <div   class="headline   "   *ngFor="let news of item.news_description.slice(0,1)"     >  
+        <img  class="headline-img"  [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' +news.image" alt=""  width="367.8px " height="203.88px">
+        <div class="headline-container pt-4 ">
+          <a href="" class="link"> <h3 class="headline-content" style="text-align: justify;">{{news.title}}</h3></a>
+          <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ item.author  }}</a></p>
+        </div>
+        <!-- ===============subnews========== -->
+      
+        <!-- <div class="row sub-heading  " >
+          <div class="col-4  "> <img class="sub-img"  [src]="newsSection.subNewsImgUrl" alt="" width="100%" height="auto"> </div>
+          <div class="col-8  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;">{{newsSection.subNewsContent}}</h3>
+            <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p></div>
           </div>
         </div> -->
-
-<div class="d-flex" *ngFor="let subnews of relatedNews">
-  <div><img class="sub-img  "  [src]="subnews.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
-  <div class="sub-heading">
-   <h3 class="sub-con  "  >{{subnews.subNewsContent}}  </h3>
-   <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ subnews.autherName  }}</a></p>
-  </div>
-</div>
-
+        <div *ngFor="let item of mainContent.category_data['पॉलिटिक्स'].slice(1,2)" > 
+          <div class="d-flex"     *ngFor="let news of item.news_description.slice(0,1)"     >
+          <div><img class="sub-img  " [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' +news.image" alt=""   width="135px"    height="96px"  ></div>
+          <div class="sub-heading">
+           <h3 class="sub-con  "  >{{news.title}}  </h3>
+           <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ item.author  }}</a></p>
+          </div>
+        </div></div>
         
-        <!-- Content for the right half -->
+         
+      </div>  
+     
+    
+           </div>
+           <div class="col-lg-6  col col-s-12 col "      >
+            <!-- <div class="row sub-heading  align-items-center " *ngFor="let subnews of relatedNews" >
+              <div class="col-lg-4 col  "  > <img class="sub-img  "  [src]="subnews.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
+              <div class="col-lg-8 col  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;font-size: 16px;font-weight: 700;  ">{{subnews.subNewsContent}}  </h3>
+                <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ subnews.autherName  }}</a></p></div>
+              </div>
+            </div> -->
+    <ng-container  *ngFor="let item of mainContent.category_data['पॉलिटिक्स'].slice(1,5)"> 
+    
+    <div class="d-flex  py-2"   *ngFor="let news of item.news_description.slice(0,1)" >
+      <div><img class="sub-img   "  [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' +item.image" alt=""   width="135px"    height="96px"  ></div>
+      <div class="sub-heading">
+       <h3 class="sub-con  "  >{{ news.title}}  </h3>
+       <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-  name"> {{ item.author  }}</a></p>
+      </div>
+    </div>
+    </ng-container>
+    
+            
+            <!-- Content for the right half -->
+          </div>
+      
+     
+           
+        </div>
+
+   
+    <!-- =============================== investigation=========== -->
+    <div class="row px-2"  *ngFor="let item of mainContent.category_data['टॉप न्यूज'].slice(0,1)"   >
+  
+      <h3 class="news-title my-4"> {{item.category}}  </h3>
+           <div class="col-lg-6  col-12  "  >
+           
+             <!-- Content for the left half -->
+              <!-- ================new============= -->
+     <div   class="headline   "   *ngFor="let news of item.news_description.slice(0,1)"     >  
+        <img  class="headline-img"  [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' +news.image" alt=""  width="367.8px " height="203.88px">
+        <div class="headline-container pt-4 ">
+          <a href="" class="link"> <h3 class="headline-content" style="text-align: justify;">{{news.title}}</h3></a>
+          <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ item.author  }}</a></p>
+        </div>
+        <!-- ===============subnews========== -->
+      
+        <!-- <div class="row sub-heading  " >
+          <div class="col-4  "> <img class="sub-img"  [src]="newsSection.subNewsImgUrl" alt="" width="100%" height="auto"> </div>
+          <div class="col-8  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;">{{newsSection.subNewsContent}}</h3>
+            <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p></div>
+          </div>
+        </div> -->
+        <div *ngFor="let item of mainContent.category_data['टॉप न्यूज'].slice(1,2)" > 
+          <div class="d-flex"     *ngFor="let news of item.news_description.slice(0,1)"     >
+          <div><img class="sub-img  " [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' +news.image" alt=""   width="135px"    height="96px"  ></div>
+          <div class="sub-heading">
+           <h3 class="sub-con  "  >{{news.title}}  </h3>
+           <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ item.author  }}</a></p>
+          </div>
+        </div></div>
+        
+         
+      </div>  
+     
+    
+           </div>
+           <div class="col-lg-6  col col-s-12 col "      >
+            <!-- <div class="row sub-heading  align-items-center " *ngFor="let subnews of relatedNews" >
+              <div class="col-lg-4 col  "  > <img class="sub-img  "  [src]="subnews.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
+              <div class="col-lg-8 col  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;font-size: 16px;font-weight: 700;  ">{{subnews.subNewsContent}}  </h3>
+                <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ subnews.autherName  }}</a></p></div>
+              </div>
+            </div> -->
+    <ng-container  *ngFor="let item of mainContent.category_data['टॉप न्यूज'].slice(2,5)"> 
+    
+    <div class="d-flex  py-2"   *ngFor="let news of item.news_description.slice(0,1)" >
+      <div><img class="sub-img   "  [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' +item.image" alt=""   width="135px"    height="96px"  ></div>
+      <div class="sub-heading">
+       <h3 class="sub-con  "  >{{ news.title}}  </h3>
+       <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-  name"> {{ item.author  }}</a></p>
+      </div>
+    </div>
+    </ng-container>
+    
+            
+            <!-- Content for the right half -->
+          </div>
+      
+     
+           
+        </div>
+
+    <!-- ============================4t add================= -->
+
+    <div class="row my-3">
+      <div class="col-12">
+        <div class="top-ad-container mx-2">
+          <p class="fw-light text-center py-0 my-0">
+            <small>ADVERTISEMENT</small>
+          </p>
+          <iframe src="" frameborder="0"></iframe>
+        </div>
       </div>
     </div>
 
-    <!-- ============================4t add================= -->
+
+    <!-- =========================khabardar============= -->
+    <div class="row px-2"  *ngFor="let item of mainContent.category_data['पॉलिटिक्स'].slice(0,1)"   >
+  
+      <h3 class="news-title my-4"> {{item.category}}  </h3>
+           <div class="col-lg-6  col-12  "  >
+           
+             <!-- Content for the left half -->
+              <!-- ================new============= -->
+     <div   class="headline   "   *ngFor="let news of item.news_description.slice(0,1)"     >  
+        <img  class="headline-img"  [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' +news.image" alt=""  width="367.8px " height="203.88px">
+        <div class="headline-container pt-4 ">
+          <a href="" class="link"> <h3 class="headline-content" style="text-align: justify;">{{news.title}}</h3></a>
+          <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ item.author  }}</a></p>
+        </div>
+        <!-- ===============subnews========== -->
+      
+        <!-- <div class="row sub-heading  " >
+          <div class="col-4  "> <img class="sub-img"  [src]="newsSection.subNewsImgUrl" alt="" width="100%" height="auto"> </div>
+          <div class="col-8  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;">{{newsSection.subNewsContent}}</h3>
+            <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ newsSection.autherName  }}</a></p></div>
+          </div>
+        </div> -->
+        <div *ngFor="let item of mainContent.category_data['पॉलिटिक्स'].slice(1,2)" > 
+          <div class="d-flex"     *ngFor="let news of item.news_description.slice(0,1)"     >
+          <div><img class="sub-img  " [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' +news.image" alt=""   width="135px"    height="96px"  ></div>
+          <div class="sub-heading">
+           <h3 class="sub-con  "  >{{news.title}}  </h3>
+           <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ item.author  }}</a></p>
+          </div>
+        </div></div>
+        
+         
+      </div>  
+     
+    
+           </div>
+           <div class="col-lg-6  col col-s-12 col "      >
+            <!-- <div class="row sub-heading  align-items-center " *ngFor="let subnews of relatedNews" >
+              <div class="col-lg-4 col  "  > <img class="sub-img  "  [src]="subnews.subNewsImgUrl" alt=""   width="135px"    height="96px"  ></div>
+              <div class="col-lg-8 col  ">  <div class="ps-1"><h3 class="sub-con  " style="text-align: justify;font-size: 16px;font-weight: 700;  ">{{subnews.subNewsContent}}  </h3>
+                <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-name"> {{ subnews.autherName  }}</a></p></div>
+              </div>
+            </div> -->
+    <ng-container  *ngFor="let item of mainContent.category_data['पॉलिटिक्स'].slice(1,5)"> 
+    
+    <div class="d-flex  py-2"   *ngFor="let news of item.news_description.slice(0,1)" >
+      <div><img class="sub-img   "  [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' +item.image" alt=""   width="135px"    height="96px"  ></div>
+      <div class="sub-heading">
+       <h3 class="sub-con  "  >{{ news.title}}  </h3>
+       <p class="date"><i class="fa-solid fa-calendar-days"></i> <time datetime=""  > {{date | date:'dd-mm-yyyy'}}</time> by <a href="" class="auther-  name"> {{ item.author  }}</a></p>
+      </div>
+    </div>
+    </ng-container>
+    
+            
+            <!-- Content for the right half -->
+          </div>
+      
+     
+           
+        </div>
+
+         <!-- ============================5
+          t add================= -->
 
     <div class="row my-3">
       <div class="col-12">

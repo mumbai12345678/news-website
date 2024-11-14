@@ -9,22 +9,24 @@
 
 
   <aside class="left-nav"  style="padding: 8px 0px; z-index: 50;">
-    <a   *ngFor="let item of leftNavData.categories" class="left-nav-content" [href]=" item.url">
+    <a   *ngFor="let item of leftNavData?.categories" class="left-nav-content" [href]=" item.url">
       <div class="nav-item">
-        <i [class]=" 'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads'+item.image"></i> 
+       
         <img   [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' + item.image" alt="" width="16px" height="16px"  >
 
-      <span style="margin: 0rem .5rem;">   {{ item.category }}</span>
+        <span style="margin: 0rem .5rem; display: inline-block; vertical-align: middle;">{{ item.category }}</span>
+        <i *ngIf="item.category === 'राज्य'" class="fas fa-chevron-right" style="font-size: 16px; vertical-align: middle;  float:right;  "></i>
+        
   
         
-        <i *ngIf="item.category === 'राज्य'" class="fas fa-chevron-right" style="float: right;"></i>
+        <ul *ngIf="item.category === 'राज्य'" class="dropdown-menu"     >
+          <li *ngFor="let state of item.states"> <a  [href]=" state.url" class="link">{{ state.state_name }}</a></li>
+        </ul>
        
       </div>
       
     
-      <ul *ngIf="item.category === 'राज्य'" class="dropdown-menu"     >
-        <li *ngFor="let state of item.states"> <a  [href]=" state.url" class="link">{{ state.state_name }}</a></li>
-      </ul>
+      
     </a>
     <div class="d-flex justify-content-around  mt-5">
       

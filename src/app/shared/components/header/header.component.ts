@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   isvisible:boolean=false;
     resSearchToggler:boolean=true;
     Icon:boolean=true;
- 
+    
   header=[
     {
       icon:'fa-solid fa-house menu-icon pe-2',
@@ -99,15 +99,39 @@ export class HeaderComponent implements OnInit {
 
   constructor(private commonservice: CommonService) { }
   headerData:any;
+  resHeaderData:any;
+  ResLeftData:any;
 
   ngOnInit(): void {
-  this.getData()
+  this.getData();
+  
+  this. getResData();
+  this.getResLeftData();
   }
 
   getData(){
     this.commonservice.getData('','').subscribe((res)=>{
       this.headerData=res
       console.log(this.headerData)
+    })
+  }
+  // ====================topresdata===========
+  getResData(){
+    this.commonservice.getLeftNavData().subscribe(res=>{
+this.resHeaderData=res;
+console.log(this.resHeaderData)
+    })
+
+  }
+  // ================================
+
+
+  // ==============leftResdata===========
+
+  getResLeftData(){
+    this.commonservice.getLeftNavData().subscribe(res=>{
+this.ResLeftData=res;
+console.log(this.ResLeftData)
     })
   }
 //   @HostListener('window:scroll', [])
@@ -145,5 +169,7 @@ searchToggler(){
    this.Icon= !this.Icon;
 
 }
-
+// ===========testing code===========
+ 
+ 
 }

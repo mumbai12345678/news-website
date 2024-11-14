@@ -25,4 +25,8 @@ export class CommonService {
     let url = `/fetch_sidebar_category.php`;
     return this.http.get(this.baseUrl + url)
   }
+  getHomeData(limit?:any  ) : Observable<any> {
+    let url = `/homepage_api.php?limit=${limit}`;
+    return this.http.get(this.baseUrl + url)
+  }
 }

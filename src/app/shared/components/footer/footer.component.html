@@ -135,9 +135,9 @@
         <ng-container
           *ngFor="let item of latestNews; let i = index"
         >
-          <li *ngIf="i < 2" class="news-content    ">
-            <a>{{ item.heading }}</a>
-          </li>
+        <a href="" class="link">   <li *ngIf="i < 2" class="news-content    ">
+            {{ item.heading }}
+          </li> </a>
         </ng-container>
       </ul>
      </div>
@@ -146,9 +146,11 @@
         <ng-container
           *ngFor="let item of latestNews; let i = index"
         >
-          <li *ngIf="i > 1" class="news-content   ">
-            <a>{{ item.heading }}</a>
-          </li>
+          <a href="" class="link">
+            <li *ngIf="i > 1" class="news-content   ">
+              {{ item.heading }} 
+            </li>
+          </a>
         </ng-container>
       </ul>
      </div>

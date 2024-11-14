@@ -1,3 +1,40 @@
+.dropdown-menu {
+  list-style: none;
+  padding-left: 0;
+  position: absolute;
+  z-index: 110;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  display: none; /* Hidden by default */
+  max-height: 550px;
+  padding: 0;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.left-nav-content:hover .dropdown-menu {
+  display: block; /* Show on hover */
+}
+
+.dropdown-menu li {
+  padding: 0px 10px !important;
+  cursor: pointer;
+  
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+.res-drop{
+  width: 100%; text-align: left; width: 100%;
+      text-align: left;
+      border: none;
+      background: white;
+  ;
+}
+ 
+/* =================== */
+ 
 .top-nav {
 
     /* height: 4.875rem; */

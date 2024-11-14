@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/shared/service/common.service';
 
 @Component({
   selector: 'app-home',
@@ -6,14 +7,61 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  mainContent:any;
 // Component TypeScript file
+slides = [
+  {
+    image: 'https://example.com/image1.jpg',
+    title: 'Slide 1',
+    description: 'Description 1',
+    link: '#'
+  },
+  {
+    image: 'https://example.com/image2.jpg',
+    title: 'Slide 2',
+    description: 'Description 2',
+    link: '#'
+  },
+  {
+    image: 'https://example.com/image3.jpg',
+    title: 'Slide 3',
+    description: 'Description 3',
+    link: '#'
+  },
+  {
+    image: 'https://example.com/image4.jpg',
+    title: 'Slide 4',
+    description: 'Description 4',
+    link: '#'
+  },
+  {
+    image: 'https://example.com/image5.jpg',
+    title: 'Slide 5',
+    description: 'Description 5',
+    link: '#'
+  }
+  // Add more slides as needed
+];
+
+currentIndex = 0;
+slidesToShow = 3; // Number of images visible at a time
+
+getTransformStyle(): string {
+  return `translateX(-${this.currentIndex * (100 / this.slidesToShow)}%)`;
+}
+
+prevSlide(): void {
+  if (this.currentIndex > 0) {
+    this.currentIndex--;
+  }
+}
+
+nextSlide(): void {
+  if (this.currentIndex < this.slides.length - this.slidesToShow) {
+    this.currentIndex++;
+  }
+}
  
- 
-
-
-
-
   // ======================
  
   newsTitle="बड़ी खबरें"
@@ -93,10 +141,21 @@ export class HomeComponent implements OnInit {
 // ====================
 
 
-  constructor() { }
+  constructor( private homeData:CommonService) {
+
+
+   }
 
   ngOnInit(): void {
+    const limit = 6
+    this.homeData.getHomeData(limit).subscribe(res=>{
+      delete res.category_data["होम"];
+      console.log('1')
+      this.mainContent=res;
+      console.log('home',this.mainContent)
+    })
   }
+  
   
 
 }
