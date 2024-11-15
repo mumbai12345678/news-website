@@ -20,6 +20,9 @@
     }
   } */
 
+  .custom-icon{
+    position: absolute; bottom: 35px;
+  }
   .nav-item:focus,
   .nav-item:active {
     border-left: 4px solid #B71F33;

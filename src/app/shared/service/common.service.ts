@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { observable, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +27,11 @@ export class CommonService {
   }
   getHomeData(limit?:any  ) : Observable<any> {
     let url = `/homepage_api.php?limit=${limit}`;
+    return this.http.get(this.baseUrl + url)
+  }
+  // ======rightNavData=======
+  data(limit?:any):Observable<any>{ 
+    let url = `/fetch_categories_news.php?limit=${limit}`;
     return this.http.get(this.baseUrl + url)
   }
 }

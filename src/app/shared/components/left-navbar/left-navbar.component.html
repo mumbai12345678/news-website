@@ -8,7 +8,7 @@
   </aside> -->
 
 
-  <aside class="left-nav"  style="padding: 8px 0px; z-index: 50;">
+  <aside class="left-nav"  style="padding: 8px 0px; z-index: 50; " >
     <a   *ngFor="let item of leftNavData?.categories" class="left-nav-content" [href]=" item.url">
       <div class="nav-item">
        
@@ -28,20 +28,22 @@
     
       
     </a>
-    <div class="d-flex justify-content-around  mt-5">
+    
+      <div class="d-flex justify-content-around custom-icon  " >
       
-      <div class="footer-icon">
-        <i class="fa-brands fa-facebook-f  "></i>
+        <div class="footer-icon  ms-2">
+          <i class="fa-brands fa-facebook-f  "></i>
+        </div>
+        <div class="footer-icon ms-2">
+          <i class="fa-brands fa-x-twitter  "></i>
+        </div>
+        <div class="footer-icon ms-2">
+          <i class="fa-brands fa-instagram  "></i>
+        </div>
+        <div class="footer-icon ms-2">
+          <i class="fa-brands fa-youtube  "></i>
+        </div>
       </div>
-      <div class="footer-icon">
-        <i class="fa-brands fa-x-twitter  "></i>
-      </div>
-      <div class="footer-icon">
-        <i class="fa-brands fa-instagram  "></i>
-      </div>
-      <div class="footer-icon">
-        <i class="fa-brands fa-youtube  "></i>
-      </div>
-    </div>
+  
   </aside>
   

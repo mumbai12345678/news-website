@@ -154,6 +154,9 @@ nextSlide(): void {
       this.mainContent=res;
       console.log('home',this.mainContent)
     })
+    this.homeData.data().subscribe(res=>{
+      console.log('bye',res)
+    })
   }
   
   

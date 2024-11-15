@@ -84,45 +84,35 @@
  
 <!-- =================s -->
  
-<!-- <div class="dropdown">
-  <button class="  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu" style="transition: initial;">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-</div> -->
+ 
 
 
-<a *ngFor="let item of ResLeftData?.categories" class="left-nav-content" [href]="item.url">
-  <div class="nav-item">
+<a *ngFor="let item of ResLeftData?.categories" class="left-nav-content" [href]="item.url"  >
+  <div class="nav-item"  >
     <img *ngIf="item.image !== '5909716382svgexport-10.svg'" [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' + item.image" alt="" width="16px" height="16px">
-    <span *ngIf="item.category !== 'राज्य'" style="margin: 0rem .5rem; display: inline-block; vertical-align: middle; color: black;">{{ item.category }}</span>
+    <span *ngIf="item.category !== 'राज्य'" style="margin: 0rem .5rem; display: inline-block; vertical-align: middle;  color: #334155 " class="res-left-font">{{ item.category }}</span>
 
-    <!-- Dropdown for "राज्य" category -->
+     
     
-
-    <!-- Only show the dropdown if the category is 'राज्य' -->
-    <div *ngIf="item.category === 'राज्य'" class="dropdown">
-      <button  type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"  class="res-drop">
-        <img [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' + item.image" alt="" width="16px" height="16px">  {{item.category}}  
-        <i *ngIf="item.category === 'राज्य'" class="fa-solid fa-angle-down" style="font-size: 16px; vertical-align: middle; float:right;color: black;"></i> 
+ 
+    <div *ngIf="item.category === 'राज्य'" class="dropdown  ">
+      <button  type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"  class="res-drop res-left-font custom-dropdown"  >
+        <img [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' + item.image" alt="" width="16px" height="16px" style=" color: #334155 !important;">  {{item.category}}  
+        <i *ngIf="item.category === 'राज्य'" class="fa-solid fa-angle-down  " style="  vertical-align: middle; float:right;color:  #334155;"></i> 
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="transition: initial;">
         <li *ngFor="let state of item.states">
-          <a [href]="state.url" class="dropdown-item" style="color: black;">{{ state.state_name }}</a>
+          <a [href]="state.url" class="dropdown-item" style="color: black; font-size: 18px;">{{ state.state_name }}</a>
         </li>
       </ul>
     </div>
 
-    <!-- Normal link for other categories (non-'राज्य') -->
-    <ul *ngIf="item.category !== 'राज्य'" class="dropdown-menu" style="display: none;">
+   
+    <!-- <ul *ngIf="item.category !== 'राज्य'" class="dropdown-menu" style="display: none;">
       <li *ngFor="let state of item.states">
         <a [href]="state.url" class="link" style="color: black;">{{ state.state_name }}</a>
       </li>
-    </ul>
+    </ul> -->
 
   </div>
 </a>

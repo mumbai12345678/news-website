@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../../service/common.service';
 export interface Topic {
   name: string;
 }
@@ -169,10 +170,15 @@ export class RightNavbarComponent implements OnInit {
               subNewsContent: "56 सालों के बाद विमान हादसे में मारे गए सेना के इस अधिकारी का शव मिला, बर्फ के इस पहाड़ में छिपा था शव!",
               autherName:" Parivesh Gupta"}
     ] 
+    latestData:any;
 
-  constructor() { }
+  constructor( private common_service:CommonService) { }
 
   ngOnInit(): void {
+    this.common_service.data(6).subscribe(res=>{
+this.latestData=res;
+console.log('data',this.latestData)
+    })
   }
 
 }
