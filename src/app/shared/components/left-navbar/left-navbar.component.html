@@ -9,7 +9,7 @@
 
 
   <aside class="left-nav"  style="padding: 8px 0px; z-index: 50; " >
-    <a   *ngFor="let item of leftNavData?.categories" class="left-nav-content" [href]=" item.url">
+    <a  *ngFor="let item of leftNavData?.categories"  routerLink="category"      class="left-nav-content"  >
       <div class="nav-item">
        
         <img   [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' + item.image" alt="" width="16px" height="16px"  >

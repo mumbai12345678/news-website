@@ -3,17 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { RightSidebarComponent } from './pages/right-sidebar/right-sidebar.component';
 import { TopNewsComponent } from './pages/top-news/top-news.component';
+import { CategorizedNewsComponent } from './pages/categorized-news/categorized-news.component';
 
 const routes: Routes = [
   {
     path:"",component:HomeComponent
   },
   {
-    path:"right-sidebar",component:RightSidebarComponent, outlet:"right-sidebar"
+    path:"category",component: CategorizedNewsComponent
   },
-  {
-    path:"top-news",component:TopNewsComponent
-  },
+   
+   
 ];
 
 @NgModule({

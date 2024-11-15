@@ -34,4 +34,9 @@ export class CommonService {
     let url = `/fetch_categories_news.php?limit=${limit}`;
     return this.http.get(this.baseUrl + url)
   }
+  Cdata(category:any):Observable<any>{ 
+    let url = `/fetch_categories_news.php?category=${category}`;
+    return this.http.get(this.baseUrl + url)
+  }
 }
+ 

@@ -10,6 +10,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RightNavbarComponent } from './components/right-navbar/right-navbar.component';
 import { TopButtonComponent } from '../pages/top-button/top-button.component';
+import { RouterModule } from '@angular/router';
  
  
 
@@ -29,8 +30,8 @@ import { TopButtonComponent } from '../pages/top-button/top-button.component';
     CommonModule,
     MatChipsModule,
     BrowserAnimationsModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    RouterModule
   ],
   exports: [
     FooterComponent,

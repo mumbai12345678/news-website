@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { TopButtonComponent } from './pages/top-button/top-button.component';
 import { SharedModule } from './shared/shared.module';
 import { TopNewsComponent } from './pages/top-news/top-news.component';
+import { CategorizedNewsComponent } from './pages/categorized-news/categorized-news.component';
  
  
  
@@ -22,6 +23,7 @@ import { TopNewsComponent } from './pages/top-news/top-news.component';
     AppComponent,
     HomeComponent,
     TopNewsComponent,
+    CategorizedNewsComponent,
   ],
   imports: [ SharedModule,
     

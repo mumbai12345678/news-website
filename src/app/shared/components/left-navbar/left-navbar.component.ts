@@ -9,10 +9,12 @@ import { CommonService } from '../../service/common.service';
 export class LeftNavbarComponent implements OnInit {
   selectedIndex:any= -1;
    leftNavData:any;
+   category: any;
+   categoryData:any;
 
   constructor( private service:CommonService) { }
 
-  ngOnInit(): void { 
+  ngOnInit( ): void { 
 this.service.getLeftNavData().subscribe(res=>{
 this.leftNavData=res;
 console.log( "hey",this.leftNavData)
@@ -22,7 +24,12 @@ console.log( "hey",this.leftNavData)
  
  
   
-
+getdata(){
+   
+  this.service.Cdata(this.category).subscribe((res)=>{
+    this.categoryData=res;
+  })
+}
 
 
   selectItem(index: number) {
