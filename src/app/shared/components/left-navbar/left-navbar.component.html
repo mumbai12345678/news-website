@@ -9,24 +9,25 @@
 
 
   <aside class="left-nav"  style="padding: 8px 0px; z-index: 50; " >
-    <a  *ngFor="let item of leftNavData?.categories"  routerLink="category"      class="left-nav-content"  >
+    <a  *ngFor="let item of leftNavData?.categories"   [routerLink]="[item.category ]"     class="left-nav-content"      (click)="currentCategory( item.category)"   >
       <div class="nav-item">
        
         <img   [src]="'https://dangalnews.revanshrenewable.com/admin/DO4U/uploads/' + item.image" alt="" width="16px" height="16px"  >
 
-        <span style="margin: 0rem .5rem; display: inline-block; vertical-align: middle;">{{ item.category }}</span>
+        <span style="margin: 0rem .5rem; display: inline-block; vertical-align: middle;" #Category>{{ item.category }}</span>
         <i *ngIf="item.category === 'राज्य'" class="fas fa-chevron-right" style="font-size: 16px; vertical-align: middle;  float:right;  "></i>
         
   
         
         <ul *ngIf="item.category === 'राज्य'" class="dropdown-menu"     >
-          <li *ngFor="let state of item.states"> <a  [href]=" state.url" class="link">{{ state.state_name }}</a></li>
+          <li *ngFor="let state of item.states"> <a  [routerLink]="[item.category, state.state_name]"  class="link" (click)="currentSubCategory($event, state.state_name)"  >{{ state.state_name }}</a>
+          </li>
         </ul>
        
       </div>
       
     
-      
+
     </a>
     
       <div class="d-flex justify-content-around custom-icon  " >

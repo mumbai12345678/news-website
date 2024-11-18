@@ -10,7 +10,12 @@ const routes: Routes = [
     path:"",component:HomeComponent
   },
   {
-    path:"category",component: CategorizedNewsComponent
+    path: ':category',  // Category route
+    component: CategorizedNewsComponent
+  },
+  {
+    path: ':category/:subcategory',  // Category + subcategory route
+    component: CategorizedNewsComponent
   },
    
    

@@ -1,0 +1,32 @@
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    color: #6c757d;
+    content: "|" !important;
+}
+.breadcrumb{
+    background-color: rgb(243 244 246);
+    color: #374151 !important;
+    font-size: 14px;
+    padding:  .5rem 1rem !important;
+    border-radius: 0px !important;
+}
+    .breadcrumb-item a{
+        text-decoration: 0px;
+    color: #374151;
+     
+}
+.breadcrumb-item a:hover{
+    color: #B71F33
+     
+}
+/* ==================ad
+ 
+*/
+.top-ad-container{
+    height: 8.125rem;
+    background-color: rgb(243 244 246);
+    margin-top: 8px;
+    
+  }

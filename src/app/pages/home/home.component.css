@@ -1,4 +1,4 @@
-/* ===============vicons============ */
+/* ===============vicons============   */
 /* .icon-container {
   width: 56px;
   height: 56px;
@@ -183,18 +183,8 @@ display: -webkit-box; /* Ensures the container behaves like a box */
   -webkit-line-clamp: 3; /* Limits the text to 3 lines */
   overflow: hidden;
 }
-.headline-container{
-    /* height: 96px; */
-}
-.headline{
-    /* width: 406.56px; */
-    
-   
-    
-    
-    
-}
-
+ 
+ 
  
 
     
@@ -202,6 +192,8 @@ display: -webkit-box; /* Ensures the container behaves like a box */
         font-size: 20px;
         color:#B71F33;
         font-weight: 700;
+        
+ 
   
      
 

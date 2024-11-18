@@ -19,6 +19,7 @@ this.service.getLeftNavData().subscribe(res=>{
 this.leftNavData=res;
 console.log( "hey",this.leftNavData)
 })
+ 
   }
     
  
@@ -26,7 +27,7 @@ console.log( "hey",this.leftNavData)
   
 getdata(){
    
-  this.service.Cdata(this.category).subscribe((res)=>{
+  this.service.dataByCategory(this.category).subscribe((res)=>{
     this.categoryData=res;
   })
 }
@@ -34,6 +35,15 @@ getdata(){
 
   selectItem(index: number) {
     this.selectedIndex = index;
+  }
+  currentCategory(data:string,subCat?:string){
+    console.log( "you are at:",  data)
+
+  }
+  currentSubCategory( event: Event,subCat?:string){
+    event.stopPropagation()
+    console.log( "you are at:",  subCat)
+
   }
 }
 
